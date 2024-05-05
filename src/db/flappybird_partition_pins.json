@@ -12,6 +12,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "blue_out",
+					"strict" : false
+				},
+				{
 					"name" : "horiz_sync_out",
 					"strict" : false
 				},
@@ -89,6 +93,14 @@
 				},
 				{
 					"name" : "PS2_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "pb1",
+					"strict" : false
+				},
+				{
+					"name" : "pb2",
 					"strict" : false
 				}
 			]
