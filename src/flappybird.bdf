@@ -751,7 +751,57 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -32 440 160 616)
+	(rect 120 760 312 872)
+	(text "pipes" (rect 5 0 30 12)(font "Arial" ))
+	(text "inst10" (rect 8 96 36 113)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "vert_sync" (rect 0 0 50 12)(font "Arial" ))
+		(text "vert_sync" (rect 21 27 71 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
+		(text "pixel_row[9..0]" (rect 21 43 91 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "pixel_column[9..0]" (rect 0 0 89 12)(font "Arial" ))
+		(text "pixel_column[9..0]" (rect 21 59 110 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 192 32)
+		(output)
+		(text "red" (rect 0 0 15 12)(font "Arial" ))
+		(text "red" (rect 159 27 174 39)(font "Arial" ))
+		(line (pt 192 32)(pt 176 32))
+	)
+	(port
+		(pt 192 48)
+		(output)
+		(text "green" (rect 0 0 27 12)(font "Arial" ))
+		(text "green" (rect 149 43 176 55)(font "Arial" ))
+		(line (pt 192 48)(pt 176 48))
+	)
+	(port
+		(pt 192 64)
+		(output)
+		(text "blue" (rect 0 0 20 12)(font "Arial" ))
+		(text "blue" (rect 155 59 175 71)(font "Arial" ))
+		(line (pt 192 64)(pt 176 64))
+	)
+	(drawing
+		(rectangle (rect 16 16 176 96))
+	)
+)
+(symbol
+	(rect -40 440 152 616)
 	(text "bouncy_ball" (rect 5 0 64 12)(font "Arial" ))
 	(text "inst" (rect 8 160 25 172)(font "Arial" ))
 	(port
@@ -855,28 +905,12 @@ refer to the applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt -32 520)
-	(pt -112 520)
-)
-(connector
-	(pt -112 520)
-	(pt -112 672)
-)
-(connector
 	(pt 464 520)
 	(pt 528 520)
 )
 (connector
 	(pt 568 584)
 	(pt 528 584)
-)
-(connector
-	(pt -32 488)
-	(pt -72 488)
-)
-(connector
-	(pt -32 472)
-	(pt -64 472)
 )
 (connector
 	(pt -32 320)
@@ -901,14 +935,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 144 320)
 	(pt 216 320)
-)
-(connector
-	(pt -32 504)
-	(pt -48 504)
-)
-(connector
-	(pt -48 504)
-	(pt -48 432)
 )
 (connector
 	(pt 216 432)
@@ -1085,44 +1111,6 @@ refer to the applicable agreement for further details.
 	(pt 216 456)
 )
 (connector
-	(pt -112 672)
-	(pt 528 672)
-)
-(connector
-	(pt 160 472)
-	(pt 240 472)
-)
-(connector
-	(pt 240 488)
-	(pt 160 488)
-)
-(connector
-	(pt 240 504)
-	(pt 160 504)
-)
-(connector
-	(text "pixel_row[9..0]" (rect -96 595 -79 664)(font "Intel Clear" )(vertical))
-	(pt -72 552)
-	(pt -72 664)
-	(bus)
-)
-(connector
-	(pt -32 552)
-	(pt -72 552)
-	(bus)
-)
-(connector
-	(text "pixel_column[9..0]" (rect -72 580 -55 667)(font "Intel Clear" )(vertical))
-	(pt -48 568)
-	(pt -48 664)
-	(bus)
-)
-(connector
-	(pt -32 568)
-	(pt -48 568)
-	(bus)
-)
-(connector
 	(pt 616 280)
 	(pt 728 280)
 )
@@ -1172,15 +1160,135 @@ refer to the applicable agreement for further details.
 	(pt 688 232)
 )
 (connector
-	(text "left_click" (rect -78 520 -35 537)(font "Intel Clear" ))
-	(pt -32 536)
-	(pt -72 536)
-)
-(connector
 	(pt 688 232)
 	(pt 712 232)
+)
+(connector
+	(text "pixel_row[9..0]" (rect -32 800 37 817)(font "Intel Clear" ))
+	(pt 120 808)
+	(pt 48 808)
+	(bus)
+)
+(connector
+	(text "pixel_column[9..0]" (rect -32 816 55 833)(font "Intel Clear" ))
+	(pt 120 824)
+	(pt 48 824)
+	(bus)
+)
+(connector
+	(pt 120 792)
+	(pt 96 792)
+)
+(connector
+	(pt 96 792)
+	(pt 96 672)
+)
+(connector
+	(pt -112 672)
+	(pt 96 672)
+)
+(connector
+	(pt 96 672)
+	(pt 528 672)
+)
+(connector
+	(pt -112 520)
+	(pt -40 520)
+)
+(connector
+	(pt -112 672)
+	(pt -112 520)
+)
+(connector
+	(pt -64 472)
+	(pt -40 472)
+)
+(connector
+	(pt -72 488)
+	(pt -40 488)
+)
+(connector
+	(pt -48 504)
+	(pt -40 504)
+)
+(connector
+	(pt -48 432)
+	(pt -48 504)
+)
+(connector
+	(text "pixel_row[9..0]" (rect -96 595 -79 664)(font "Intel Clear" )(vertical))
+	(pt -72 664)
+	(pt -72 552)
+	(bus)
+)
+(connector
+	(pt -72 552)
+	(pt -40 552)
+	(bus)
+)
+(connector
+	(text "pixel_column[9..0]" (rect -72 580 -55 667)(font "Intel Clear" )(vertical))
+	(pt -48 664)
+	(pt -48 568)
+	(bus)
+)
+(connector
+	(pt -48 568)
+	(pt -40 568)
+	(bus)
+)
+(connector
+	(text "left_click" (rect -86 520 -43 537)(font "Intel Clear" ))
+	(pt -40 536)
+	(pt -80 536)
+)
+(connector
+	(text "red" (rect 152 456 167 473)(font "Intel Clear" ))
+	(pt 152 472)
+	(pt 168 472)
+)
+(connector
+	(text "green" (rect 152 472 179 489)(font "Intel Clear" ))
+	(pt 152 488)
+	(pt 168 488)
+)
+(connector
+	(text "blue" (rect 152 488 173 505)(font "Intel Clear" ))
+	(pt 152 504)
+	(pt 168 504)
+)
+(connector
+	(text "red" (rect 208 456 223 473)(font "Intel Clear" ))
+	(pt 240 472)
+	(pt 224 472)
+)
+(connector
+	(text "green" (rect 208 472 235 489)(font "Intel Clear" ))
+	(pt 240 488)
+	(pt 224 488)
+)
+(connector
+	(text "blue" (rect 208 488 229 505)(font "Intel Clear" ))
+	(pt 240 504)
+	(pt 224 504)
+)
+(connector
+	(text "red" (rect 312 776 327 793)(font "Intel Clear" ))
+	(pt 312 792)
+	(pt 344 792)
+)
+(connector
+	(text "green" (rect 312 792 339 809)(font "Intel Clear" ))
+	(pt 312 808)
+	(pt 344 808)
+)
+(connector
+	(text "blue" (rect 312 808 333 825)(font "Intel Clear" ))
+	(pt 312 824)
+	(pt 344 824)
 )
 (junction (pt 528 584))
 (junction (pt 216 432))
 (junction (pt 216 320))
 (junction (pt 688 256))
+(junction (pt 96 672))
