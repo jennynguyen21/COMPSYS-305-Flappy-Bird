@@ -299,6 +299,10 @@ rgb_out[1] <= rgb_multiplexer:inst1.rgb_out[1]
 rgb_out[2] <= rgb_multiplexer:inst1.rgb_out[2]
 ball_on => rgb_multiplexer:inst1.select_bit
 pipe_on => rgb_multiplexer:inst.select_bit
+background_on => rgb_multiplexer:inst3.select_bit
+background_rgb[0] => rgb_multiplexer:inst3.rgb_in_1[0]
+background_rgb[1] => rgb_multiplexer:inst3.rgb_in_1[1]
+background_rgb[2] => rgb_multiplexer:inst3.rgb_in_1[2]
 pipes_rgb[0] => rgb_multiplexer:inst.rgb_in_1[0]
 pipes_rgb[1] => rgb_multiplexer:inst.rgb_in_1[1]
 pipes_rgb[2] => rgb_multiplexer:inst.rgb_in_1[2]
@@ -323,6 +327,21 @@ rgb_out[2] <= rgb_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |flappybird|rgb_output:inst8|rgb_multiplexer:inst
+select_bit => rgb_out.OUTPUTSELECT
+select_bit => rgb_out.OUTPUTSELECT
+select_bit => rgb_out.OUTPUTSELECT
+rgb_in_0[0] => rgb_out.DATAA
+rgb_in_0[1] => rgb_out.DATAA
+rgb_in_0[2] => rgb_out.DATAA
+rgb_in_1[0] => rgb_out.DATAB
+rgb_in_1[1] => rgb_out.DATAB
+rgb_in_1[2] => rgb_out.DATAB
+rgb_out[0] <= rgb_out.DB_MAX_OUTPUT_PORT_TYPE
+rgb_out[1] <= rgb_out.DB_MAX_OUTPUT_PORT_TYPE
+rgb_out[2] <= rgb_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flappybird|rgb_output:inst8|rgb_multiplexer:inst3
 select_bit => rgb_out.OUTPUTSELECT
 select_bit => rgb_out.OUTPUTSELECT
 select_bit => rgb_out.OUTPUTSELECT
@@ -712,5 +731,33 @@ SevenSeg_out[3] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[4] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[5] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[6] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|flappybird|background:inst10
+vert_sync => ~NO_FANOUT~
+pixel_row[0] => ~NO_FANOUT~
+pixel_row[1] => ~NO_FANOUT~
+pixel_row[2] => ~NO_FANOUT~
+pixel_row[3] => ~NO_FANOUT~
+pixel_row[4] => ~NO_FANOUT~
+pixel_row[5] => ~NO_FANOUT~
+pixel_row[6] => ~NO_FANOUT~
+pixel_row[7] => ~NO_FANOUT~
+pixel_row[8] => ~NO_FANOUT~
+pixel_row[9] => ~NO_FANOUT~
+pixel_column[0] => ~NO_FANOUT~
+pixel_column[1] => ~NO_FANOUT~
+pixel_column[2] => ~NO_FANOUT~
+pixel_column[3] => ~NO_FANOUT~
+pixel_column[4] => ~NO_FANOUT~
+pixel_column[5] => ~NO_FANOUT~
+pixel_column[6] => ~NO_FANOUT~
+pixel_column[7] => ~NO_FANOUT~
+pixel_column[8] => ~NO_FANOUT~
+pixel_column[9] => ~NO_FANOUT~
+background_rgb[0] <= <VCC>
+background_rgb[1] <= <VCC>
+background_rgb[2] <= <GND>
+background_on <= <VCC>
 
 
