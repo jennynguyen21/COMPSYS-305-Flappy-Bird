@@ -104,6 +104,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "pb2",
+					"strict" : false
+				},
+				{
 					"name" : "switches[1]",
 					"strict" : false
 				},

@@ -74,7 +74,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -184 1008 -16 1024)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "switches[2]" (rect 5 0 61 12)(font "Arial" ))
+	(text "switches[2]" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -85,12 +85,13 @@ refer to the applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -256 1008 -192 1032))
 )
 (pin
 	(input)
 	(rect -184 1024 -16 1040)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "switches[1]" (rect 5 0 59 17)(font "Intel Clear" ))
+	(text "switches[1]" (rect 5 0 58 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -101,12 +102,13 @@ refer to the applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -256 1024 -192 1048))
 )
 (pin
 	(input)
 	(rect -184 1040 -16 1056)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "switches[0]" (rect 5 0 59 17)(font "Intel Clear" ))
+	(text "switches[0]" (rect 5 0 58 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -117,6 +119,7 @@ refer to the applicable agreement for further details.
 		(line (pt 109 12)(pt 113 8))
 	)
 	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -256 1040 -192 1064))
 )
 (pin
 	(output)

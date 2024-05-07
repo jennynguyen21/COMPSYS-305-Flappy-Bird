@@ -37,9 +37,9 @@ ball_on_temp <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and (
 --Green <= (not pb2) and (not ball_on);
 --Blue <=  not ball_on;
 
-ball_rgb(2) <= pb1;
-ball_rgb(1) <= pb2;
-ball_rgb(0) <= '0';
+ball_rgb(2) <= (not) pb1;
+ball_rgb(1) <= (not pb2);
+ball_rgb(0) <= 0;
 
 ball_on <= ball_on_temp;
 
