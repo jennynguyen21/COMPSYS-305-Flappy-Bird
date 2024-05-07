@@ -98,6 +98,18 @@
 				{
 					"name" : "pb1",
 					"strict" : false
+				},
+				{
+					"name" : "switches[2]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[1]",
+					"strict" : false
+				},
+				{
+					"name" : "switches[0]",
+					"strict" : false
 				}
 			]
 		}

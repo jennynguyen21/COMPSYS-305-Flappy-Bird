@@ -5,6 +5,9 @@ pb1 => bouncy_ball:inst.pb1
 pb2 => bouncy_ball:inst.pb2
 PS2_DAT <> MOUSE:inst2.mouse_data
 PS2_CLK <> MOUSE:inst2.mouse_clk
+switches[0] => background:inst11.switches[0]
+switches[1] => background:inst11.switches[1]
+switches[2] => background:inst11.switches[2]
 green_out <= VGA_SYNC:inst1.green_out
 blue_out <= VGA_SYNC:inst1.blue_out
 horiz_sync_out <= VGA_SYNC:inst1.horiz_sync_out
@@ -633,6 +636,37 @@ pipes_rgb[2] <= <GND>
 pipe_on <= pipe_on_temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|flappybird|background:inst11
+vert_sync => ~NO_FANOUT~
+pixel_row[0] => ~NO_FANOUT~
+pixel_row[1] => ~NO_FANOUT~
+pixel_row[2] => ~NO_FANOUT~
+pixel_row[3] => ~NO_FANOUT~
+pixel_row[4] => ~NO_FANOUT~
+pixel_row[5] => ~NO_FANOUT~
+pixel_row[6] => ~NO_FANOUT~
+pixel_row[7] => ~NO_FANOUT~
+pixel_row[8] => ~NO_FANOUT~
+pixel_row[9] => ~NO_FANOUT~
+pixel_column[0] => ~NO_FANOUT~
+pixel_column[1] => ~NO_FANOUT~
+pixel_column[2] => ~NO_FANOUT~
+pixel_column[3] => ~NO_FANOUT~
+pixel_column[4] => ~NO_FANOUT~
+pixel_column[5] => ~NO_FANOUT~
+pixel_column[6] => ~NO_FANOUT~
+pixel_column[7] => ~NO_FANOUT~
+pixel_column[8] => ~NO_FANOUT~
+pixel_column[9] => ~NO_FANOUT~
+switches[0] => background_rgb[0].DATAIN
+switches[1] => background_rgb[1].DATAIN
+switches[2] => background_rgb[2].DATAIN
+background_rgb[0] <= switches[0].DB_MAX_OUTPUT_PORT_TYPE
+background_rgb[1] <= switches[1].DB_MAX_OUTPUT_PORT_TYPE
+background_rgb[2] <= switches[2].DB_MAX_OUTPUT_PORT_TYPE
+background_on <= <VCC>
+
+
 |flappybird|BCD_to_SevenSeg:inst6
 BCD_digit[0] => Equal0.IN3
 BCD_digit[0] => Equal1.IN3
@@ -731,33 +765,5 @@ SevenSeg_out[3] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[4] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[5] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
 SevenSeg_out[6] <= SevenSeg_out.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|flappybird|background:inst10
-vert_sync => ~NO_FANOUT~
-pixel_row[0] => ~NO_FANOUT~
-pixel_row[1] => ~NO_FANOUT~
-pixel_row[2] => ~NO_FANOUT~
-pixel_row[3] => ~NO_FANOUT~
-pixel_row[4] => ~NO_FANOUT~
-pixel_row[5] => ~NO_FANOUT~
-pixel_row[6] => ~NO_FANOUT~
-pixel_row[7] => ~NO_FANOUT~
-pixel_row[8] => ~NO_FANOUT~
-pixel_row[9] => ~NO_FANOUT~
-pixel_column[0] => ~NO_FANOUT~
-pixel_column[1] => ~NO_FANOUT~
-pixel_column[2] => ~NO_FANOUT~
-pixel_column[3] => ~NO_FANOUT~
-pixel_column[4] => ~NO_FANOUT~
-pixel_column[5] => ~NO_FANOUT~
-pixel_column[6] => ~NO_FANOUT~
-pixel_column[7] => ~NO_FANOUT~
-pixel_column[8] => ~NO_FANOUT~
-pixel_column[9] => ~NO_FANOUT~
-background_rgb[0] <= <VCC>
-background_rgb[1] <= <VCC>
-background_rgb[2] <= <GND>
-background_on <= <VCC>
 
 
