@@ -1,0 +1,55 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity display_text is
+    port (
+        clock: in  std_logic;
+		pixel_row, pixel_column: in std_logic_vector (9 downto 0);
+		text_enable: in std_logic;
+        vga_rgb: out std_logic_vector(2 downto 0)
+    );
+end entity display_text;
+
+architecture behavior of display_text is
+    signal char_address : std_logic_vector(5 downto 0);
+    signal font_row, font_col : std_logic_vector(9 downto 0);
+    signal rom_output : std_logic;
+    signal text_rgb : std_logic_vector(2 downto 0);
+
+    -- Component declaration for char_rom
+    component char_rom
+        port (
+            character_address : in  std_logic_vector(5 downto 0);
+            font_row, font_col : in  std_logic_vector(2 downto 0);
+            clock       : in  std_logic;
+            rom_mux_output : std_logic
+        );
+    end component;
+
+begin
+    -- Instantiate char_rom component
+    char_rom_inst : char_rom
+        port map (
+            character_address => char_address,
+            font_row => font_row (3 downto 1),
+            font_col => font_col (3 downto 1),
+            clock => clock,
+            rom_mux_output => rom_output
+        );
+	get_characters : process (clk)
+		begin
+			if (rising_edge(clk)) then
+				if ((pixel_column <= std_logic_vector(to_unsigned(16,10))) and (pixel_row >= std_logic_vector(to_unsigned(462,10)))) then
+					char_address <= "001100";
+					font_row <= pixel_row(3 downto 1);
+					font_col <= pixel_column (3 downto 1);
+				else
+					char_address <= "100000";
+					font_row <= pixel_row(3 downto 1);
+					font_col <= pixel_column (3 downto 1);
+				end if;
+			end if;
+			
+	end process;
+end architecture behavior;
