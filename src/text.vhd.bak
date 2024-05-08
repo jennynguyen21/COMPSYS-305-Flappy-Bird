@@ -2,16 +2,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity text is
+entity display_text is
     port (
         clock: in  std_logic;
         pixel_column, pixel_row: in unsigned (9 downto 0);
         text_enable: out std_logic;
         vga_rgb: out std_logic_vector(2 downto 0)
     );
-end entity text;
+end entity display_text;
 
-architecture behavior of text is
+architecture behavior of display_text is
     signal char_address : std_logic_vector(5 downto 0);
     signal font_col, font_row : std_logic_vector(2 downto 0);
     signal rom_output : std_logic;
