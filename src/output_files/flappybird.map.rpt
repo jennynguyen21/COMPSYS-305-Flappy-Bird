@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappybird
-Wed May 08 20:56:22 2024
+Mon May 13 16:26:17 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -52,13 +52,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed May 08 20:56:22 2024       ;
+; Analysis & Synthesis Status     ; Successful - Mon May 13 16:26:17 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappybird                                  ;
 ; Top-level Entity Name           ; flappybird                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 192                                         ;
+; Total registers                 ; 200                                         ;
 ; Total pins                      ; 29                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 4,096                                       ;
@@ -172,8 +172,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-16        ;   0.0%      ;
+;     Processors 2-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -215,16 +214,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                              ;
 +---------------------------------------------+--------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 174                                                                ;
+; Estimate of Logic utilization (ALMs needed) ; 193                                                                ;
 ;                                             ;                                                                    ;
-; Combinational ALUT usage for logic          ; 282                                                                ;
-;     -- 7 input functions                    ; 3                                                                  ;
-;     -- 6 input functions                    ; 54                                                                 ;
-;     -- 5 input functions                    ; 45                                                                 ;
-;     -- 4 input functions                    ; 43                                                                 ;
-;     -- <=3 input functions                  ; 137                                                                ;
+; Combinational ALUT usage for logic          ; 317                                                                ;
+;     -- 7 input functions                    ; 4                                                                  ;
+;     -- 6 input functions                    ; 56                                                                 ;
+;     -- 5 input functions                    ; 55                                                                 ;
+;     -- 4 input functions                    ; 49                                                                 ;
+;     -- <=3 input functions                  ; 153                                                                ;
 ;                                             ;                                                                    ;
-; Dedicated logic registers                   ; 192                                                                ;
+; Dedicated logic registers                   ; 200                                                                ;
 ;                                             ;                                                                    ;
 ; I/O pins                                    ; 29                                                                 ;
 ; Total MLAB memory bits                      ; 0                                                                  ;
@@ -237,8 +236,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                    ;
 ; Maximum fan-out node                        ; pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 98                                                                 ;
-; Total fan-out                               ; 1799                                                               ;
-; Average fan-out                             ; 3.31                                                               ;
+; Total fan-out                               ; 1936                                                               ;
+; Average fan-out                             ; 3.30                                                               ;
 +---------------------------------------------+--------------------------------------------------------------------+
 
 
@@ -247,17 +246,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Entity Name     ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |flappybird                                  ; 282 (1)             ; 192 (0)                   ; 4096              ; 0          ; 29   ; 0            ; |flappybird                                                                                                   ; flappybird      ; work         ;
+; |flappybird                                  ; 317 (1)             ; 200 (0)                   ; 4096              ; 0          ; 29   ; 0            ; |flappybird                                                                                                   ; flappybird      ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst6                                                                             ; BCD_to_SevenSeg ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst7                                                                             ; BCD_to_SevenSeg ; work         ;
 ;    |MOUSE:inst2|                             ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |flappybird|MOUSE:inst2                                                                                       ; MOUSE           ; work         ;
 ;    |VGA_SYNC:inst1|                          ; 41 (41)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|VGA_SYNC:inst1                                                                                    ; VGA_SYNC        ; work         ;
-;    |bouncy_ball:inst|                        ; 63 (63)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                  ; bouncy_ball     ; work         ;
-;    |pipes:inst9|                             ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pipes:inst9                                                                                       ; pipes           ; work         ;
+;    |bouncy_ball:inst|                        ; 65 (65)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                  ; bouncy_ball     ; work         ;
+;    |pipes:inst9|                             ; 42 (42)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pipes:inst9                                                                                       ; pipes           ; work         ;
 ;    |pll:inst3|                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pll:inst3                                                                                         ; pll             ; pll          ;
 ;       |pll_0002:pll_inst|                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pll:inst3|pll_0002:pll_inst                                                                       ; pll_0002        ; pll          ;
 ;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i                                               ; altera_pll      ; work         ;
-;    |text:inst14|                             ; 50 (48)             ; 13 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |flappybird|text:inst14                                                                                       ; text            ; work         ;
+;    |text:inst14|                             ; 47 (45)             ; 13 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |flappybird|text:inst14                                                                                       ; text            ; work         ;
 ;       |char_rom:char_rom_inst|               ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|text:inst14|char_rom:char_rom_inst                                                                ; char_rom        ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|text:inst14|char_rom:char_rom_inst|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|text:inst14|char_rom:char_rom_inst|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated ; altsyncram_d5g1 ; work         ;
@@ -303,6 +302,9 @@ Encoding Type:  One-Hot
 +----------------------------------------+-----------------------------------------------+
 ; Register name                          ; Reason for Removal                            ;
 +----------------------------------------+-----------------------------------------------+
+; pipes:inst9|pipe_x_motion[0,1]         ; Stuck at GND due to stuck port data_in        ;
+; pipes:inst9|pipe_x_motion[2]           ; Stuck at VCC due to stuck port data_in        ;
+; pipes:inst9|pipe_x_motion[3..9]        ; Stuck at GND due to stuck port data_in        ;
 ; bouncy_ball:inst|ball_y_motion[0,3]    ; Stuck at GND due to stuck port data_in        ;
 ; text:inst14|text_rgb[0..2]             ; Stuck at VCC due to stuck port data_in        ;
 ; MOUSE:inst2|CHAROUT[4..7]              ; Stuck at VCC due to stuck port data_in        ;
@@ -311,10 +313,12 @@ Encoding Type:  One-Hot
 ; MOUSE:inst2|CHAROUT[0,1]               ; Stuck at GND due to stuck port data_in        ;
 ; MOUSE:inst2|SHIFTOUT[10]               ; Stuck at VCC due to stuck port data_in        ;
 ; bouncy_ball:inst|ball_y_motion[4..9]   ; Merged with bouncy_ball:inst|ball_y_motion[2] ;
+; pipes:inst9|pipe_x[0]                  ; Merged with pipes:inst9|pipe_x[1]             ;
+; pipes:inst9|pipe_x[1]                  ; Stuck at GND due to stuck port data_in        ;
 ; bouncy_ball:inst|ball_y_pos[0]         ; Stuck at GND due to stuck port data_in        ;
 ; MOUSE:inst2|cursor_row[9]              ; Stuck at GND due to stuck port data_in        ;
 ; VGA_SYNC:inst1|pixel_row[9]            ; Stuck at GND due to stuck port data_in        ;
-; Total Number of Removed Registers = 23 ;                                               ;
+; Total Number of Removed Registers = 35 ;                                               ;
 +----------------------------------------+-----------------------------------------------+
 
 
@@ -323,7 +327,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 192   ;
+; Total registers                              ; 200   ;
 ; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
@@ -338,13 +342,16 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
+; pipes:inst9|pipe_x[8]                  ; 12      ;
+; pipes:inst9|pipe_x[7]                  ; 12      ;
+; pipes:inst9|pipe_x[4]                  ; 5       ;
 ; MOUSE:inst2|send_char                  ; 3       ;
 ; MOUSE:inst2|SHIFTOUT[3]                ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[5]                ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[6]                ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[7]                ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[8]                ; 1       ;
-; Total number of inverted registers = 6 ;         ;
+; Total number of inverted registers = 9 ;         ;
 +----------------------------------------+---------+
 
 
@@ -353,17 +360,17 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|new_cursor_column[2]                   ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[1]                          ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[8]                          ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|new_cursor_row[8]                      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[0]                          ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[1]                          ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[4]                          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[1]                       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[6]                       ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst14|char_address[3]                        ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst14|char_address[4]                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[2]                       ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[8]                       ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst14|char_address[2]                        ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst14|char_address[1]                        ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |flappybird|rgb_output:inst12|rgb_multiplexer:inst2|rgb_out[1] ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst6|SevenSeg_out[5]              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst7|SevenSeg_out[5]              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst6|SevenSeg_out[3]              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst7|SevenSeg_out[0]              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 
 
@@ -709,30 +716,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 192                         ;
+; arriav_ff             ; 200                         ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 79                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 18                          ;
 ;     ENA SLD           ; 20                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 49                          ;
+;     plain             ; 57                          ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 285                         ;
-;     arith             ; 63                          ;
+; arriav_lcell_comb     ; 320                         ;
+;     arith             ; 79                          ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 41                          ;
+;         1 data inputs ; 57                          ;
 ;         2 data inputs ; 21                          ;
-;     extend            ; 3                           ;
-;         7 data inputs ; 3                           ;
-;     normal            ; 209                         ;
+;     extend            ; 4                           ;
+;         7 data inputs ; 4                           ;
+;     normal            ; 227                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 38                          ;
-;         4 data inputs ; 43                          ;
-;         5 data inputs ; 45                          ;
-;         6 data inputs ; 54                          ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 36                          ;
+;         4 data inputs ; 49                          ;
+;         5 data inputs ; 55                          ;
+;         6 data inputs ; 56                          ;
 ;     shared            ; 10                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 9                           ;
@@ -741,7 +748,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 8                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.30                        ;
-; Average LUT depth     ; 2.28                        ;
+; Average LUT depth     ; 2.44                        ;
 +-----------------------+-----------------------------+
 
 
@@ -760,7 +767,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed May 08 20:56:16 2024
+    Info: Processing started: Mon May 13 16:26:10 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappybird -c flappybird
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -897,8 +904,8 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 157
 Warning (12125): Using design file pipes.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 15
-    Info (12023): Found entity 1: pipes File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 6
+    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 14
+    Info (12023): Found entity 1: pipes File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 5
 Info (12128): Elaborating entity "pipes" for hierarchy "pipes:inst9"
 Warning (12125): Using design file background.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: background-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/background.vhd Line: 16
@@ -1147,17 +1154,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 389 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 424 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 351 logic cells
+    Info (21061): Implemented 386 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 246 warnings
-    Info: Peak virtual memory: 4938 megabytes
-    Info: Processing ended: Wed May 08 20:56:22 2024
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4936 megabytes
+    Info: Processing ended: Mon May 13 16:26:17 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:12
 
 
