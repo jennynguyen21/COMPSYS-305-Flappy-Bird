@@ -30,7 +30,7 @@ architecture Behavioral of pipes is
     signal pipe_gap_center: std_logic_vector(9 downto 0);
 
     signal lfsr_clk: std_logic;
-    signal lfsr_out: std_logic_vector(7 downto 0);
+    signal lfsr_out: stf_logic_vector(7 downto 0);
 
     signal pipe_on_temp: std_logic;
 
@@ -42,7 +42,7 @@ begin
         lfsr_out => lfsr_out
     );
 
-    pipe_gap_center <= std_logic_vector(to_signed(248, 10) + signed(lfsr_out));
+    pipe_gap_center <= to_unsigned(to_signed(lfsr_out) + to_signed(248, 10));
 
     -- pipe_on_temp <= '1' when (
     --     unsigned(pixel_column) >= unsigned(pipe_x) and
@@ -51,11 +51,13 @@ begin
     --      unsigned(pixel_row) > to_unsigned(240 + pipe_gap / 2, 10))
     -- ) else '0';
 
+    
+
         pipe_on_temp <= '1' when (
         unsigned(pixel_column) >= unsigned(pipe_x) and
         unsigned(pixel_column) < unsigned(pipe_x) + to_unsigned(pipe_width, 10) and
-        (unsigned(pixel_row) < unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) or
-        unsigned(pixel_row) >  unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10))
+        (unsigned(pixel_row) < unsigned(pipe_gap_center) - to_unsigned((to_integer(unsigned(pipe_gap)) / 2), 10) or
+        unsigned(pixel_row) >  unsigned(pipe_gap_center) + to_unsigned((to_integer(unsigned(pipe_gap)) / 2), 10))
     ) else '0';
 
     pipes_rgb <= "010" when pipe_on_temp = '1' else "000";
