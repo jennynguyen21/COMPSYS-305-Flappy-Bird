@@ -70,12 +70,12 @@ begin
                     font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
                 elsif ((pixel_column >= 176 and pixel_column < 208) and (pixel_row >= 12 and pixel_row < 44)) then
                     char_address <= MY_ARRAY(tens);
-                    font_col <= std_logic_vector(pixel_column - 176)(3 downto 1);  -- Adjusted offset
-                    font_row <= std_logic_vector(pixel_row - 12)(3 downto 1);
+                    font_col <= std_logic_vector(pixel_column - 176)(4 downto 2);  -- Adjusted offset
+                    font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
                 else
                     char_address <= "100000"; -- Space
-                    font_col <= std_logic_vector(pixel_column)(3 downto 1);
-                    font_row <= std_logic_vector(pixel_row)(3 downto 1);
+                    font_col <= std_logic_vector(pixel_column)(4 downto 2);
+                    font_row <= std_logic_vector(pixel_row)(4 downto 2);
                 end if;
         
                 -- Set text_rgb only when rom_output is '1'
