@@ -9,7 +9,8 @@ entity pipes is
         start_x_pos: in std_logic_vector(9 downto 0);
         lfsr_seed: in std_logic_vector(7 downto 0);
         pipes_rgb: OUT std_logic_vector(2 downto 0);
-        pipe_on: OUT std_logic
+        pipe_on: OUT std_logic;
+        score_track: OUT std_logic
     );
 end pipes;
 
@@ -55,6 +56,8 @@ begin
         (unsigned(pixel_row) < unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) or
         unsigned(pixel_row) >  unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10))
     ) else '0';
+
+    score_track <= '1' when ((unsigned(pipe_x_position) <= 310) and (unsigned(pipe_x_position) >= 250)) else '0';
 
     pipes_rgb <= "010" when pipe_on_temp = '1' else "000";
     pipe_on <= pipe_on_temp;
