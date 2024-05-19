@@ -6,7 +6,7 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb2, clk, vert_sync, left_click	: IN std_logic;
+		( pb1, pb0, clk, vert_sync, left_click	: IN std_logic;
           pixel_row, pixel_column				: IN std_logic_vector(9 DOWNTO 0);
 		  ball_rgb						        : OUT std_logic_vector(2 DOWNTO 0);	
 		  ball_on						        : OUT std_logic);	
@@ -32,7 +32,7 @@ ball_on_temp <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and (
 			'0';
 
 ball_rgb(2) <= pb1;
-ball_rgb(1) <= pb2;
+ball_rgb(1) <= pb0;
 ball_rgb(0) <= '0';
 
 ball_on <= ball_on_temp;
