@@ -73,6 +73,13 @@ refer to the applicable agreement for further details.
 		(line (pt 0 128)(pt 16 128)(line_width 3))
 	)
 	(port
+		(pt 0 144)
+		(input)
+		(text "state[1..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "state[1..0]" (rect 21 139 58 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
+	)
+	(port
 		(pt 224 32)
 		(output)
 		(text "ball_rgb[2..0]" (rect 0 0 50 12)(font "Arial" ))
@@ -85,6 +92,13 @@ refer to the applicable agreement for further details.
 		(text "ball_on" (rect 0 0 27 12)(font "Arial" ))
 		(text "ball_on" (rect 176 43 203 55)(font "Arial" ))
 		(line (pt 224 48)(pt 208 48)(line_width 1))
+	)
+	(port
+		(pt 224 64)
+		(output)
+		(text "start" (rect 0 0 17 12)(font "Arial" ))
+		(text "start" (rect 186 59 203 71)(font "Arial" ))
+		(line (pt 224 64)(pt 208 64)(line_width 1))
 	)
 	(drawing
 		(rectangle (rect 16 16 208 160)(line_width 1))

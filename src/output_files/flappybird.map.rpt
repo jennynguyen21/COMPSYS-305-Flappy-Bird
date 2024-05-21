@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappybird
-Sun May 19 22:45:16 2024
+Tue May 21 16:28:08 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -61,13 +61,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun May 19 22:45:16 2024       ;
+; Analysis & Synthesis Status     ; Successful - Tue May 21 16:28:08 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappybird                                  ;
 ; Top-level Entity Name           ; flappybird                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 274                                         ;
+; Total registers                 ; 276                                         ;
 ; Total pins                      ; 31                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 12,288                                      ;
@@ -181,7 +181,8 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -237,16 +238,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                              ;
 +---------------------------------------------+--------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 381                                                                ;
+; Estimate of Logic utilization (ALMs needed) ; 385                                                                ;
 ;                                             ;                                                                    ;
-; Combinational ALUT usage for logic          ; 657                                                                ;
+; Combinational ALUT usage for logic          ; 662                                                                ;
 ;     -- 7 input functions                    ; 7                                                                  ;
-;     -- 6 input functions                    ; 89                                                                 ;
-;     -- 5 input functions                    ; 114                                                                ;
-;     -- 4 input functions                    ; 94                                                                 ;
-;     -- <=3 input functions                  ; 353                                                                ;
+;     -- 6 input functions                    ; 92                                                                 ;
+;     -- 5 input functions                    ; 113                                                                ;
+;     -- 4 input functions                    ; 92                                                                 ;
+;     -- <=3 input functions                  ; 358                                                                ;
 ;                                             ;                                                                    ;
-; Dedicated logic registers                   ; 274                                                                ;
+; Dedicated logic registers                   ; 276                                                                ;
 ;                                             ;                                                                    ;
 ; I/O pins                                    ; 31                                                                 ;
 ; Total MLAB memory bits                      ; 0                                                                  ;
@@ -258,8 +259,8 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                  ;
 ;                                             ;                                                                    ;
 ; Maximum fan-out node                        ; pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 158                                                                ;
-; Total fan-out                               ; 3440                                                               ;
+; Maximum fan-out                             ; 159                                                                ;
+; Total fan-out                               ; 3457                                                               ;
 ; Average fan-out                             ; 3.37                                                               ;
 +---------------------------------------------+--------------------------------------------------------------------+
 
@@ -269,18 +270,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |flappybird                                  ; 657 (1)             ; 274 (0)                   ; 12288             ; 0          ; 31   ; 0            ; |flappybird                                                                                                             ; flappybird          ; work         ;
+; |flappybird                                  ; 662 (1)             ; 276 (0)                   ; 12288             ; 0          ; 31   ; 0            ; |flappybird                                                                                                             ; flappybird          ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst6                                                                                       ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst7                                                                                       ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst2|                             ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |flappybird|MOUSE:inst2                                                                                                 ; MOUSE               ; work         ;
 ;    |VGA_SYNC:inst1|                          ; 42 (42)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|VGA_SYNC:inst1                                                                                              ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst|                        ; 67 (67)             ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                            ; bouncy_ball         ; work         ;
-;    |display_obstacle:inst8|                  ; 143 (13)            ; 38 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8                                                                                      ; display_obstacle    ; work         ;
+;    |bouncy_ball:inst|                        ; 71 (71)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                            ; bouncy_ball         ; work         ;
+;    |display_obstacle:inst8|                  ; 143 (13)            ; 37 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8                                                                                      ; display_obstacle    ; work         ;
 ;       |pipes:pipes1|                         ; 62 (54)             ; 18 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes1                                                                         ; pipes               ; work         ;
 ;          |lfsr:random_number|                ; 8 (8)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes1|lfsr:random_number                                                      ; lfsr                ; work         ;
-;       |pipes:pipes2|                         ; 68 (60)             ; 19 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes2                                                                         ; pipes               ; work         ;
+;       |pipes:pipes2|                         ; 68 (60)             ; 18 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes2                                                                         ; pipes               ; work         ;
 ;          |lfsr:random_number|                ; 8 (8)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes2|lfsr:random_number                                                      ; lfsr                ; work         ;
-;    |fsm:inst10|                              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|fsm:inst10                                                                                                  ; fsm                 ; work         ;
+;    |fsm:inst10|                              ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|fsm:inst10                                                                                                  ; fsm                 ; work         ;
 ;    |menu:inst17|                             ; 114 (112)           ; 13 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17                                                                                                 ; menu                ; work         ;
 ;       |char_rom:char_rom_inst|               ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17|char_rom:char_rom_inst                                                                          ; char_rom            ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component                                          ; altsyncram          ; work         ;
@@ -361,7 +362,6 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------+--------------------------------------------------------------------+
 ; Register name                                           ; Reason for Removal                                                 ;
 +---------------------------------------------------------+--------------------------------------------------------------------+
-; bouncy_ball:inst|ball_y_motion[0,2,5]                   ; Stuck at GND due to stuck port data_in                             ;
 ; text:inst15|text_rgb[0..2]                              ; Stuck at VCC due to stuck port data_in                             ;
 ; display_obstacle:inst8|rgb_output[0,2]                  ; Stuck at GND due to stuck port data_in                             ;
 ; score:inst9|text_rgb[0..2]                              ; Stuck at VCC due to stuck port data_in                             ;
@@ -377,20 +377,20 @@ Encoding Type:  One-Hot
 ; display_obstacle:inst8|pipes:pipes1|pipe_x_motion[0,1]  ; Stuck at GND due to stuck port data_in                             ;
 ; display_obstacle:inst8|pipes:pipes1|pipe_x_motion[2]    ; Stuck at VCC due to stuck port data_in                             ;
 ; display_obstacle:inst8|pipes:pipes1|pipe_x_motion[3..9] ; Stuck at GND due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes1|start               ; Merged with display_obstacle:inst8|pipes:pipes2|start              ;
 ; bouncy_ball:inst|ball_y_motion[4,6..9]                  ; Merged with bouncy_ball:inst|ball_y_motion[3]                      ;
+; bouncy_ball:inst|ball_y_motion[2,5]                     ; Merged with bouncy_ball:inst|ball_y_motion[0]                      ;
 ; display_obstacle:inst8|pipes:pipes2|pipe_x_position[1]  ; Merged with display_obstacle:inst8|pipes:pipes2|pipe_x_position[0] ;
 ; display_obstacle:inst8|pipes:pipes1|pipe_x_position[1]  ; Merged with display_obstacle:inst8|pipes:pipes1|pipe_x_position[0] ;
-; bouncy_ball:inst|ball_y_pos[0]                          ; Stuck at GND due to stuck port data_in                             ;
+; bouncy_ball:inst|ball_y_motion[0]                       ; Stuck at GND due to stuck port data_in                             ;
 ; display_obstacle:inst8|pipes:pipes2|pipe_x_position[0]  ; Stuck at GND due to stuck port data_in                             ;
 ; display_obstacle:inst8|pipes:pipes1|pipe_x_position[0]  ; Stuck at GND due to stuck port data_in                             ;
+; bouncy_ball:inst|ball_y_pos[0]                          ; Stuck at GND due to stuck port data_in                             ;
 ; MOUSE:inst2|cursor_row[9]                               ; Stuck at GND due to stuck port data_in                             ;
 ; VGA_SYNC:inst1|pixel_row[9]                             ; Stuck at GND due to stuck port data_in                             ;
-; fsm:inst10|current_state.training_mode                  ; Lost fanout                                                        ;
 ; fsm:inst10|current_state.normal_mode                    ; Lost fanout                                                        ;
-; fsm:inst10|current_state.game_over                      ; Lost fanout                                                        ;
 ; display_obstacle:inst8|rgb_output[1]                    ; Merged with display_obstacle:inst8|pipe_on                         ;
-; Total Number of Removed Registers = 60                  ;                                                                    ;
+; fsm:inst10|current_state.game_over                      ; Stuck at GND due to stuck port data_in                             ;
+; Total Number of Removed Registers = 58                  ;                                                                    ;
 +---------------------------------------------------------+--------------------------------------------------------------------+
 
 
@@ -399,7 +399,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 274   ;
+; Total registers                              ; 276   ;
 ; Number of registers using Synchronous Clear  ; 28    ;
 ; Number of registers using Synchronous Load   ; 28    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
@@ -414,16 +414,19 @@ Encoding Type:  One-Hot
 +--------------------------------------------------------------+---------+
 ; Inverted Register                                            ; Fan out ;
 +--------------------------------------------------------------+---------+
+; bouncy_ball:inst|ball_y_pos[7]                               ; 7       ;
+; bouncy_ball:inst|ball_y_pos[6]                               ; 7       ;
+; bouncy_ball:inst|ball_y_pos[5]                               ; 6       ;
+; bouncy_ball:inst|ball_y_pos[4]                               ; 6       ;
 ; display_obstacle:inst8|pipes:pipes1|lfsr:random_number|reset ; 8       ;
 ; display_obstacle:inst8|pipes:pipes2|lfsr:random_number|reset ; 8       ;
-; display_obstacle:inst8|pipes:pipes2|start                    ; 11      ;
 ; MOUSE:inst2|send_char                                        ; 3       ;
 ; MOUSE:inst2|SHIFTOUT[3]                                      ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[5]                                      ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[6]                                      ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[7]                                      ; 1       ;
 ; MOUSE:inst2|SHIFTOUT[8]                                      ; 1       ;
-; Total number of inverted registers = 9                       ;         ;
+; Total number of inverted registers = 12                      ;         ;
 +--------------------------------------------------------------+---------+
 
 
@@ -432,13 +435,13 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|new_cursor_column[6]                       ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[0]                              ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes1|pipe_x_position[5] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes1|pipe_x_position[6] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|new_cursor_column[8]                       ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[3]                              ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes1|pipe_x_position[8] ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes1|pipe_x_position[9] ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes2|pipe_x_position[2] ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[8]                              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[7]                              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[6]                              ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[0]                           ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[8]                           ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst15|char_address[2]                            ;
@@ -1039,7 +1042,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 274                         ;
+; arriav_ff             ; 276                         ;
 ;     CLR               ; 1                           ;
 ;     ENA               ; 88                          ;
 ;     ENA CLR           ; 15                          ;
@@ -1047,9 +1050,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 20                          ;
 ;     SCLR              ; 10                          ;
 ;     SLD               ; 8                           ;
-;     plain             ; 114                         ;
+;     plain             ; 116                         ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 660                         ;
+; arriav_lcell_comb     ; 665                         ;
 ;     arith             ; 170                         ;
 ;         0 data inputs ; 13                          ;
 ;         1 data inputs ; 83                          ;
@@ -1058,14 +1061,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 6                           ;
 ;     extend            ; 7                           ;
 ;         7 data inputs ; 7                           ;
-;     normal            ; 463                         ;
+;     normal            ; 468                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 14                          ;
+;         1 data inputs ; 18                          ;
 ;         2 data inputs ; 72                          ;
-;         3 data inputs ; 85                          ;
-;         4 data inputs ; 88                          ;
-;         5 data inputs ; 114                         ;
-;         6 data inputs ; 89                          ;
+;         3 data inputs ; 86                          ;
+;         4 data inputs ; 86                          ;
+;         5 data inputs ; 113                         ;
+;         6 data inputs ; 92                          ;
 ;     shared            ; 20                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 9                           ;
@@ -1094,7 +1097,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun May 19 22:45:10 2024
+    Info: Processing started: Tue May 21 16:28:01 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappybird -c flappybird
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1108,7 +1111,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file char_ro
     Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 20
     Info (12023): Found entity 1: char_rom File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 15
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 17
     Info (12023): Found entity 1: bouncy_ball File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ball.vhd
     Info (12022): Found design unit 1: ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/ball.vhd Line: 14
@@ -1232,21 +1235,17 @@ Warning (12125): Using design file score.vhd, which is not specified as a design
     Info (12023): Found entity 1: score File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 5
 Info (12128): Elaborating entity "score" for hierarchy "score:inst9"
 Warning (12125): Using design file display_obstacle.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: display_obstacle-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 16
+    Info (12022): Found design unit 1: display_obstacle-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 17
     Info (12023): Found entity 1: display_obstacle File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 5
 Info (12128): Elaborating entity "display_obstacle" for hierarchy "display_obstacle:inst8"
 Warning (12125): Using design file pipes.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 17
+    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 18
     Info (12023): Found entity 1: pipes File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 5
-Info (12128): Elaborating entity "pipes" for hierarchy "display_obstacle:inst8|pipes:pipes1" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 38
+Info (12128): Elaborating entity "pipes" for hierarchy "display_obstacle:inst8|pipes:pipes1" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 40
 Warning (12125): Using design file lfsr.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: lfsr-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 13
     Info (12023): Found entity 1: lfsr File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 5
-Info (12128): Elaborating entity "lfsr" for hierarchy "display_obstacle:inst8|pipes:pipes1|lfsr:random_number" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 44
-Warning (12125): Using design file text.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: text-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 14
-    Info (12023): Found entity 1: text File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 5
-Info (12128): Elaborating entity "text" for hierarchy "text:inst15"
+Info (12128): Elaborating entity "lfsr" for hierarchy "display_obstacle:inst8|pipes:pipes1|lfsr:random_number" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 43
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst2"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 25
@@ -1254,6 +1253,10 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 157
+Warning (12125): Using design file text.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: text-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 14
+    Info (12023): Found entity 1: text File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 5
+Info (12128): Elaborating entity "text" for hierarchy "text:inst15"
 Warning (12125): Using design file background.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: background-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/background.vhd Line: 16
     Info (12023): Found entity 1: background File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/background.vhd Line: 6
@@ -1303,7 +1306,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE0_CV_Default was ignored
@@ -1539,17 +1542,17 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 786 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 791 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 730 logic cells
+    Info (21061): Implemented 735 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 259 warnings
-    Info: Peak virtual memory: 4939 megabytes
-    Info: Processing ended: Sun May 19 22:45:16 2024
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4972 megabytes
+    Info: Processing ended: Tue May 21 16:28:08 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:13
 
 

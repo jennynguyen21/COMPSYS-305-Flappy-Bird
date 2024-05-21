@@ -116,11 +116,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "pb2",
+					"name" : "pb3",
 					"strict" : false
 				},
 				{
-					"name" : "pb3",
+					"name" : "pb2",
 					"strict" : false
 				}
 			]
