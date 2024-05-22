@@ -7,6 +7,7 @@ entity fsm is
         clk : in std_logic;
         reset : in std_logic;
         pb2, pb3: in std_logic;
+        collision : in std_logic;
         state_out : out std_logic_vector(1 downto 0)
     );
 end entity fsm;
@@ -26,7 +27,7 @@ begin
     end process;
 
     -- next state logic process
-    process(current_state, pb2, pb3)
+    process(current_state, pb2, pb3, collision)
     begin
         case current_state is
             when start_game =>
@@ -41,11 +42,19 @@ begin
                 end if;
             
             when training_mode =>
-                next_state <= training_mode;  -- stay in training mode
-                
-            when normal_mode =>
-                next_state <= normal_mode;     -- stay in normal mode
+                if collision = '1' then
+                    next_state <= game_over;       -- Go to game over if collision is detected
+                else
+                    next_state <= training_mode;  -- stay in training mode
+                end if;
 
+            when normal_mode =>
+                if collision = '1' then
+                    next_state <= game_over;       -- Go to game over if collision is detected
+                else
+                    next_state <= normal_mode;     -- stay in normal mode
+                end if;
+        
             when game_over =>
                 next_state <= game_over;       -- stay in game over
                 

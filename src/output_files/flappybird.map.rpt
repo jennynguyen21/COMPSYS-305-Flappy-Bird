@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappybird
-Tue May 21 16:28:08 2024
+Thu May 23 00:23:38 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,7 +16,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
  10. State Machine - |flappybird|MOUSE:inst2|mouse_state
- 11. State Machine - |flappybird|fsm:inst10|current_state
+ 11. State Machine - |flappybird|fsm:inst12|current_state
  12. Registers Removed During Synthesis
  13. General Register Statistics
  14. Inverted Register Statistics
@@ -31,8 +31,8 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  23. Parameter Settings for Inferred Entity Instance: score:inst9|lpm_divide:Mod0
  24. Parameter Settings for Inferred Entity Instance: score:inst9|lpm_divide:Div0
  25. altsyncram Parameter Settings by Entity Instance
- 26. Port Connectivity Checks: "display_obstacle:inst8|pipes:pipes2"
- 27. Port Connectivity Checks: "display_obstacle:inst8|pipes:pipes1"
+ 26. Port Connectivity Checks: "display_obstacle:inst16|pipes:pipes2"
+ 27. Port Connectivity Checks: "display_obstacle:inst16|pipes:pipes1"
  28. Post-Synthesis Netlist Statistics for Top Partition
  29. Elapsed Time Per Partition
  30. Analysis & Synthesis Messages
@@ -61,13 +61,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 21 16:28:08 2024       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 23 00:23:38 2024       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; flappybird                                  ;
 ; Top-level Entity Name           ; flappybird                                  ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 276                                         ;
+; Total registers                 ; 289                                         ;
 ; Total pins                      ; 31                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 12,288                                      ;
@@ -215,10 +215,10 @@ refer to the applicable agreement for further details.
 ; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf      ;         ;
 ; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/tcgrom.mif                  ;         ;
 ; fsm.vhd                          ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd                     ;         ;
-; score.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd                   ;         ;
 ; display_obstacle.vhd             ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd        ;         ;
 ; pipes.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd                   ;         ;
 ; lfsr.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd                    ;         ;
+; score.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd                   ;         ;
 ; text.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd                    ;         ;
 ; background.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/background.vhd              ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
@@ -238,16 +238,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                              ;
 +---------------------------------------------+--------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 385                                                                ;
+; Estimate of Logic utilization (ALMs needed) ; 422                                                                ;
 ;                                             ;                                                                    ;
-; Combinational ALUT usage for logic          ; 662                                                                ;
+; Combinational ALUT usage for logic          ; 719                                                                ;
 ;     -- 7 input functions                    ; 7                                                                  ;
-;     -- 6 input functions                    ; 92                                                                 ;
-;     -- 5 input functions                    ; 113                                                                ;
-;     -- 4 input functions                    ; 92                                                                 ;
-;     -- <=3 input functions                  ; 358                                                                ;
+;     -- 6 input functions                    ; 108                                                                ;
+;     -- 5 input functions                    ; 126                                                                ;
+;     -- 4 input functions                    ; 99                                                                 ;
+;     -- <=3 input functions                  ; 379                                                                ;
 ;                                             ;                                                                    ;
-; Dedicated logic registers                   ; 276                                                                ;
+; Dedicated logic registers                   ; 289                                                                ;
 ;                                             ;                                                                    ;
 ; I/O pins                                    ; 31                                                                 ;
 ; Total MLAB memory bits                      ; 0                                                                  ;
@@ -259,9 +259,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1                                                                  ;
 ;                                             ;                                                                    ;
 ; Maximum fan-out node                        ; pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
-; Maximum fan-out                             ; 159                                                                ;
-; Total fan-out                               ; 3457                                                               ;
-; Average fan-out                             ; 3.37                                                               ;
+; Maximum fan-out                             ; 161                                                                ;
+; Total fan-out                               ; 3722                                                               ;
+; Average fan-out                             ; 3.39                                                               ;
 +---------------------------------------------+--------------------------------------------------------------------+
 
 
@@ -270,19 +270,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |flappybird                                  ; 662 (1)             ; 276 (0)                   ; 12288             ; 0          ; 31   ; 0            ; |flappybird                                                                                                             ; flappybird          ; work         ;
+; |flappybird                                  ; 719 (1)             ; 289 (0)                   ; 12288             ; 0          ; 31   ; 0            ; |flappybird                                                                                                             ; flappybird          ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst6                                                                                       ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                   ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst7                                                                                       ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst2|                             ; 106 (106)           ; 120 (120)                 ; 0                 ; 0          ; 0    ; 0            ; |flappybird|MOUSE:inst2                                                                                                 ; MOUSE               ; work         ;
-;    |VGA_SYNC:inst1|                          ; 42 (42)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|VGA_SYNC:inst1                                                                                              ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst|                        ; 71 (71)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                            ; bouncy_ball         ; work         ;
-;    |display_obstacle:inst8|                  ; 143 (13)            ; 37 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8                                                                                      ; display_obstacle    ; work         ;
-;       |pipes:pipes1|                         ; 62 (54)             ; 18 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes1                                                                         ; pipes               ; work         ;
-;          |lfsr:random_number|                ; 8 (8)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes1|lfsr:random_number                                                      ; lfsr                ; work         ;
-;       |pipes:pipes2|                         ; 68 (60)             ; 18 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes2                                                                         ; pipes               ; work         ;
-;          |lfsr:random_number|                ; 8 (8)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst8|pipes:pipes2|lfsr:random_number                                                      ; lfsr                ; work         ;
-;    |fsm:inst10|                              ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|fsm:inst10                                                                                                  ; fsm                 ; work         ;
-;    |menu:inst17|                             ; 114 (112)           ; 13 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17                                                                                                 ; menu                ; work         ;
+;    |VGA_SYNC:inst1|                          ; 43 (43)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|VGA_SYNC:inst1                                                                                              ; VGA_SYNC            ; work         ;
+;    |bouncy_ball:inst|                        ; 79 (79)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                            ; bouncy_ball         ; work         ;
+;    |display_obstacle:inst16|                 ; 188 (13)            ; 39 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst16                                                                                     ; display_obstacle    ; work         ;
+;       |pipes:pipes1|                         ; 86 (78)             ; 19 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst16|pipes:pipes1                                                                        ; pipes               ; work         ;
+;          |lfsr:random_number|                ; 8 (8)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst16|pipes:pipes1|lfsr:random_number                                                     ; lfsr                ; work         ;
+;       |pipes:pipes2|                         ; 89 (81)             ; 19 (10)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst16|pipes:pipes2                                                                        ; pipes               ; work         ;
+;          |lfsr:random_number|                ; 8 (8)               ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|display_obstacle:inst16|pipes:pipes2|lfsr:random_number                                                     ; lfsr                ; work         ;
+;    |fsm:inst12|                              ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|fsm:inst12                                                                                                  ; fsm                 ; work         ;
+;    |menu:inst17|                             ; 115 (113)           ; 13 (13)                   ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17                                                                                                 ; menu                ; work         ;
 ;       |char_rom:char_rom_inst|               ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17|char_rom:char_rom_inst                                                                          ; char_rom            ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component                                          ; altsyncram          ; work         ;
 ;             |altsyncram_d5g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated           ; altsyncram_d5g1     ; work         ;
@@ -346,7 +346,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +--------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |flappybird|fsm:inst10|current_state                                                                                       ;
+; State Machine - |flappybird|fsm:inst12|current_state                                                                                       ;
 +-----------------------------+-------------------------+---------------------------+-----------------------------+--------------------------+
 ; Name                        ; current_state.game_over ; current_state.normal_mode ; current_state.training_mode ; current_state.start_game ;
 +-----------------------------+-------------------------+---------------------------+-----------------------------+--------------------------+
@@ -357,41 +357,38 @@ Encoding Type:  One-Hot
 +-----------------------------+-------------------------+---------------------------+-----------------------------+--------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                           ;
-+---------------------------------------------------------+--------------------------------------------------------------------+
-; Register name                                           ; Reason for Removal                                                 ;
-+---------------------------------------------------------+--------------------------------------------------------------------+
-; text:inst15|text_rgb[0..2]                              ; Stuck at VCC due to stuck port data_in                             ;
-; display_obstacle:inst8|rgb_output[0,2]                  ; Stuck at GND due to stuck port data_in                             ;
-; score:inst9|text_rgb[0..2]                              ; Stuck at VCC due to stuck port data_in                             ;
-; menu:inst17|text_rgb[0..2]                              ; Stuck at VCC due to stuck port data_in                             ;
-; MOUSE:inst2|CHAROUT[4..7]                               ; Stuck at VCC due to stuck port data_in                             ;
-; MOUSE:inst2|CHAROUT[3]                                  ; Stuck at GND due to stuck port data_in                             ;
-; MOUSE:inst2|CHAROUT[2]                                  ; Stuck at VCC due to stuck port data_in                             ;
-; MOUSE:inst2|CHAROUT[0,1]                                ; Stuck at GND due to stuck port data_in                             ;
-; MOUSE:inst2|SHIFTOUT[10]                                ; Stuck at VCC due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes2|pipe_x_motion[0,1]  ; Stuck at GND due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes2|pipe_x_motion[2]    ; Stuck at VCC due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes2|pipe_x_motion[3..9] ; Stuck at GND due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes1|pipe_x_motion[0,1]  ; Stuck at GND due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes1|pipe_x_motion[2]    ; Stuck at VCC due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes1|pipe_x_motion[3..9] ; Stuck at GND due to stuck port data_in                             ;
-; bouncy_ball:inst|ball_y_motion[4,6..9]                  ; Merged with bouncy_ball:inst|ball_y_motion[3]                      ;
-; bouncy_ball:inst|ball_y_motion[2,5]                     ; Merged with bouncy_ball:inst|ball_y_motion[0]                      ;
-; display_obstacle:inst8|pipes:pipes2|pipe_x_position[1]  ; Merged with display_obstacle:inst8|pipes:pipes2|pipe_x_position[0] ;
-; display_obstacle:inst8|pipes:pipes1|pipe_x_position[1]  ; Merged with display_obstacle:inst8|pipes:pipes1|pipe_x_position[0] ;
-; bouncy_ball:inst|ball_y_motion[0]                       ; Stuck at GND due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes2|pipe_x_position[0]  ; Stuck at GND due to stuck port data_in                             ;
-; display_obstacle:inst8|pipes:pipes1|pipe_x_position[0]  ; Stuck at GND due to stuck port data_in                             ;
-; bouncy_ball:inst|ball_y_pos[0]                          ; Stuck at GND due to stuck port data_in                             ;
-; MOUSE:inst2|cursor_row[9]                               ; Stuck at GND due to stuck port data_in                             ;
-; VGA_SYNC:inst1|pixel_row[9]                             ; Stuck at GND due to stuck port data_in                             ;
-; fsm:inst10|current_state.normal_mode                    ; Lost fanout                                                        ;
-; display_obstacle:inst8|rgb_output[1]                    ; Merged with display_obstacle:inst8|pipe_on                         ;
-; fsm:inst10|current_state.game_over                      ; Stuck at GND due to stuck port data_in                             ;
-; Total Number of Removed Registers = 58                  ;                                                                    ;
-+---------------------------------------------------------+--------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                        ;
++-----------------------------------------------------------+-----------------------------------------------+
+; Register name                                             ; Reason for Removal                            ;
++-----------------------------------------------------------+-----------------------------------------------+
+; text:inst15|text_rgb[0..2]                                ; Stuck at VCC due to stuck port data_in        ;
+; score:inst9|text_rgb[0..2]                                ; Stuck at VCC due to stuck port data_in        ;
+; display_obstacle:inst16|rgb_output[0,2]                   ; Stuck at GND due to stuck port data_in        ;
+; menu:inst17|text_rgb[0..2]                                ; Stuck at VCC due to stuck port data_in        ;
+; MOUSE:inst2|CHAROUT[4..7]                                 ; Stuck at VCC due to stuck port data_in        ;
+; MOUSE:inst2|CHAROUT[3]                                    ; Stuck at GND due to stuck port data_in        ;
+; MOUSE:inst2|CHAROUT[2]                                    ; Stuck at VCC due to stuck port data_in        ;
+; MOUSE:inst2|CHAROUT[0,1]                                  ; Stuck at GND due to stuck port data_in        ;
+; MOUSE:inst2|SHIFTOUT[10]                                  ; Stuck at VCC due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes2|pipe_x_motion[0,1]   ; Stuck at GND due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes2|pipe_x_motion[2]     ; Stuck at VCC due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes2|pipe_x_motion[3..9]  ; Stuck at GND due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes1|pipe_x_motion[0,1]   ; Stuck at GND due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes1|pipe_x_motion[2]     ; Stuck at VCC due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes1|pipe_x_motion[3..9]  ; Stuck at GND due to stuck port data_in        ;
+; bouncy_ball:inst|ball_y_motion[4,6..9]                    ; Merged with bouncy_ball:inst|ball_y_motion[3] ;
+; bouncy_ball:inst|ball_y_motion[2,5]                       ; Merged with bouncy_ball:inst|ball_y_motion[0] ;
+; bouncy_ball:inst|ball_y_motion[0]                         ; Stuck at GND due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes2|pipe_x_position[0,1] ; Stuck at GND due to stuck port data_in        ;
+; display_obstacle:inst16|pipes:pipes1|pipe_x_position[0,1] ; Stuck at GND due to stuck port data_in        ;
+; bouncy_ball:inst|ball_y_pos_out[0]                        ; Merged with bouncy_ball:inst|ball_y_pos[0]    ;
+; bouncy_ball:inst|ball_y_pos[0]                            ; Stuck at GND due to stuck port data_in        ;
+; MOUSE:inst2|cursor_row[9]                                 ; Stuck at GND due to stuck port data_in        ;
+; VGA_SYNC:inst1|pixel_row[9]                               ; Stuck at GND due to stuck port data_in        ;
+; display_obstacle:inst16|rgb_output[1]                     ; Merged with display_obstacle:inst16|pipe_on   ;
+; Total Number of Removed Registers = 57                    ;                                               ;
++-----------------------------------------------------------+-----------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -399,57 +396,57 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 276   ;
+; Total registers                              ; 289   ;
 ; Number of registers using Synchronous Clear  ; 28    ;
-; Number of registers using Synchronous Load   ; 28    ;
+; Number of registers using Synchronous Load   ; 27    ;
 ; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 141   ;
+; Number of registers using Clock Enable       ; 155   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------+
-; Inverted Register Statistics                                           ;
-+--------------------------------------------------------------+---------+
-; Inverted Register                                            ; Fan out ;
-+--------------------------------------------------------------+---------+
-; bouncy_ball:inst|ball_y_pos[7]                               ; 7       ;
-; bouncy_ball:inst|ball_y_pos[6]                               ; 7       ;
-; bouncy_ball:inst|ball_y_pos[5]                               ; 6       ;
-; bouncy_ball:inst|ball_y_pos[4]                               ; 6       ;
-; display_obstacle:inst8|pipes:pipes1|lfsr:random_number|reset ; 8       ;
-; display_obstacle:inst8|pipes:pipes2|lfsr:random_number|reset ; 8       ;
-; MOUSE:inst2|send_char                                        ; 3       ;
-; MOUSE:inst2|SHIFTOUT[3]                                      ; 1       ;
-; MOUSE:inst2|SHIFTOUT[5]                                      ; 1       ;
-; MOUSE:inst2|SHIFTOUT[6]                                      ; 1       ;
-; MOUSE:inst2|SHIFTOUT[7]                                      ; 1       ;
-; MOUSE:inst2|SHIFTOUT[8]                                      ; 1       ;
-; Total number of inverted registers = 12                      ;         ;
-+--------------------------------------------------------------+---------+
++-------------------------------------------------------------------------+
+; Inverted Register Statistics                                            ;
++---------------------------------------------------------------+---------+
+; Inverted Register                                             ; Fan out ;
++---------------------------------------------------------------+---------+
+; bouncy_ball:inst|ball_y_pos[7]                                ; 8       ;
+; bouncy_ball:inst|ball_y_pos[6]                                ; 8       ;
+; bouncy_ball:inst|ball_y_pos[5]                                ; 7       ;
+; bouncy_ball:inst|ball_y_pos[4]                                ; 7       ;
+; display_obstacle:inst16|pipes:pipes1|lfsr:random_number|reset ; 8       ;
+; display_obstacle:inst16|pipes:pipes2|lfsr:random_number|reset ; 8       ;
+; MOUSE:inst2|send_char                                         ; 3       ;
+; MOUSE:inst2|SHIFTOUT[3]                                       ; 1       ;
+; MOUSE:inst2|SHIFTOUT[5]                                       ; 1       ;
+; MOUSE:inst2|SHIFTOUT[6]                                       ; 1       ;
+; MOUSE:inst2|SHIFTOUT[7]                                       ; 1       ;
+; MOUSE:inst2|SHIFTOUT[8]                                       ; 1       ;
+; Total number of inverted registers = 12                       ;         ;
++---------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|new_cursor_column[8]                       ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[3]                              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes1|pipe_x_position[8] ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes1|pipe_x_position[9] ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst8|pipes:pipes2|pipe_x_position[2] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[8]                              ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[6]                              ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[0]                           ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[8]                           ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst15|char_address[2]                            ;
-; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst15|char_address[1]                            ;
-; 38:1               ; 4 bits    ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; Yes        ; |flappybird|menu:inst17|char_address[5]                            ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst6|SevenSeg_out[5]                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst7|SevenSeg_out[5]                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|new_cursor_column[8]                        ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[1]                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst16|pipes:pipes1|pipe_x_position[6] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst16|pipes:pipes1|pipe_x_position[2] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |flappybird|display_obstacle:inst16|pipes:pipes2|pipe_x_position[9] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[3]                               ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_row[5]                               ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[0]                            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |flappybird|MOUSE:inst2|cursor_column[6]                            ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst15|char_address[2]                             ;
+; 11:1               ; 2 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst15|char_address[4]                             ;
+; 38:1               ; 4 bits    ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; Yes        ; |flappybird|menu:inst17|char_address[5]                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst6|SevenSeg_out[5]                   ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst7|SevenSeg_out[5]                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -997,44 +994,44 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+--------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------+
-; Port Connectivity Checks: "display_obstacle:inst8|pipes:pipes2" ;
-+-------------------+-------+----------+--------------------------+
-; Port              ; Type  ; Severity ; Details                  ;
-+-------------------+-------+----------+--------------------------+
-; start_x_pos[9..2] ; Input ; Info     ; Stuck at VCC             ;
-; start_x_pos[1..0] ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[7]      ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[6]      ; Input ; Info     ; Stuck at VCC             ;
-; lfsr_seed[5]      ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[4]      ; Input ; Info     ; Stuck at VCC             ;
-; lfsr_seed[3]      ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[2]      ; Input ; Info     ; Stuck at VCC             ;
-; lfsr_seed[1]      ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[0]      ; Input ; Info     ; Stuck at VCC             ;
-+-------------------+-------+----------+--------------------------+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "display_obstacle:inst16|pipes:pipes2" ;
++-------------------+-------+----------+---------------------------+
+; Port              ; Type  ; Severity ; Details                   ;
++-------------------+-------+----------+---------------------------+
+; start_x_pos[9..2] ; Input ; Info     ; Stuck at VCC              ;
+; start_x_pos[1..0] ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[7]      ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[6]      ; Input ; Info     ; Stuck at VCC              ;
+; lfsr_seed[5]      ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[4]      ; Input ; Info     ; Stuck at VCC              ;
+; lfsr_seed[3]      ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[2]      ; Input ; Info     ; Stuck at VCC              ;
+; lfsr_seed[1]      ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[0]      ; Input ; Info     ; Stuck at VCC              ;
++-------------------+-------+----------+---------------------------+
 
 
-+-----------------------------------------------------------------+
-; Port Connectivity Checks: "display_obstacle:inst8|pipes:pipes1" ;
-+-------------------+-------+----------+--------------------------+
-; Port              ; Type  ; Severity ; Details                  ;
-+-------------------+-------+----------+--------------------------+
-; start_x_pos[5..2] ; Input ; Info     ; Stuck at VCC             ;
-; start_x_pos[1..0] ; Input ; Info     ; Stuck at GND             ;
-; start_x_pos[9]    ; Input ; Info     ; Stuck at VCC             ;
-; start_x_pos[8]    ; Input ; Info     ; Stuck at GND             ;
-; start_x_pos[7]    ; Input ; Info     ; Stuck at VCC             ;
-; start_x_pos[6]    ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[7]      ; Input ; Info     ; Stuck at VCC             ;
-; lfsr_seed[6]      ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[5]      ; Input ; Info     ; Stuck at VCC             ;
-; lfsr_seed[4]      ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[3]      ; Input ; Info     ; Stuck at VCC             ;
-; lfsr_seed[2]      ; Input ; Info     ; Stuck at GND             ;
-; lfsr_seed[1]      ; Input ; Info     ; Stuck at VCC             ;
-; lfsr_seed[0]      ; Input ; Info     ; Stuck at GND             ;
-+-------------------+-------+----------+--------------------------+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "display_obstacle:inst16|pipes:pipes1" ;
++-------------------+-------+----------+---------------------------+
+; Port              ; Type  ; Severity ; Details                   ;
++-------------------+-------+----------+---------------------------+
+; start_x_pos[5..2] ; Input ; Info     ; Stuck at VCC              ;
+; start_x_pos[1..0] ; Input ; Info     ; Stuck at GND              ;
+; start_x_pos[9]    ; Input ; Info     ; Stuck at VCC              ;
+; start_x_pos[8]    ; Input ; Info     ; Stuck at GND              ;
+; start_x_pos[7]    ; Input ; Info     ; Stuck at VCC              ;
+; start_x_pos[6]    ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[7]      ; Input ; Info     ; Stuck at VCC              ;
+; lfsr_seed[6]      ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[5]      ; Input ; Info     ; Stuck at VCC              ;
+; lfsr_seed[4]      ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[3]      ; Input ; Info     ; Stuck at VCC              ;
+; lfsr_seed[2]      ; Input ; Info     ; Stuck at GND              ;
+; lfsr_seed[1]      ; Input ; Info     ; Stuck at VCC              ;
+; lfsr_seed[0]      ; Input ; Info     ; Stuck at GND              ;
++-------------------+-------+----------+---------------------------+
 
 
 +-----------------------------------------------------+
@@ -1042,33 +1039,32 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 276                         ;
+; arriav_ff             ; 289                         ;
 ;     CLR               ; 1                           ;
-;     ENA               ; 88                          ;
+;     ENA               ; 95                          ;
 ;     ENA CLR           ; 15                          ;
 ;     ENA SCLR          ; 18                          ;
-;     ENA SLD           ; 20                          ;
+;     ENA SLD           ; 27                          ;
 ;     SCLR              ; 10                          ;
-;     SLD               ; 8                           ;
-;     plain             ; 116                         ;
+;     plain             ; 123                         ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 665                         ;
-;     arith             ; 170                         ;
+; arriav_lcell_comb     ; 722                         ;
+;     arith             ; 172                         ;
 ;         0 data inputs ; 13                          ;
-;         1 data inputs ; 83                          ;
-;         2 data inputs ; 51                          ;
+;         1 data inputs ; 87                          ;
+;         2 data inputs ; 49                          ;
 ;         3 data inputs ; 17                          ;
 ;         4 data inputs ; 6                           ;
 ;     extend            ; 7                           ;
 ;         7 data inputs ; 7                           ;
-;     normal            ; 468                         ;
+;     normal            ; 523                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 18                          ;
-;         2 data inputs ; 72                          ;
-;         3 data inputs ; 86                          ;
-;         4 data inputs ; 86                          ;
-;         5 data inputs ; 113                         ;
-;         6 data inputs ; 92                          ;
+;         1 data inputs ; 22                          ;
+;         2 data inputs ; 86                          ;
+;         3 data inputs ; 87                          ;
+;         4 data inputs ; 93                          ;
+;         5 data inputs ; 126                         ;
+;         6 data inputs ; 108                         ;
 ;     shared            ; 20                          ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 9                           ;
@@ -1078,7 +1074,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 24                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 3.71                        ;
+; Average LUT depth     ; 3.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1097,7 +1093,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue May 21 16:28:01 2024
+    Info: Processing started: Thu May 23 00:23:31 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappybird -c flappybird
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1111,7 +1107,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file char_ro
     Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 20
     Info (12023): Found entity 1: char_rom File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 17
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 19
     Info (12023): Found entity 1: bouncy_ball File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ball.vhd
     Info (12022): Found design unit 1: ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/ball.vhd Line: 14
@@ -1129,6 +1125,7 @@ Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/rgb_output.bdf
     Info (12023): Found entity 1: rgb_output
 Info (12127): Elaborating entity "flappybird" for the top level hierarchy
+Warning (275012): Pin "pb2" overlaps another pin, block, or symbol
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst3"
 Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:inst3|pll_0002:pll_inst" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll.vhd Line: 32
@@ -1227,25 +1224,23 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (12125): Using design file fsm.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: fsm-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 14
+    Info (12022): Found design unit 1: fsm-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 15
     Info (12023): Found entity 1: fsm File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 5
-Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst10"
-Warning (12125): Using design file score.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: score-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 15
-    Info (12023): Found entity 1: score File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 5
-Info (12128): Elaborating entity "score" for hierarchy "score:inst9"
+Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst12"
 Warning (12125): Using design file display_obstacle.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: display_obstacle-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 17
+    Info (12022): Found design unit 1: display_obstacle-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 20
     Info (12023): Found entity 1: display_obstacle File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 5
-Info (12128): Elaborating entity "display_obstacle" for hierarchy "display_obstacle:inst8"
+Info (12128): Elaborating entity "display_obstacle" for hierarchy "display_obstacle:inst16"
 Warning (12125): Using design file pipes.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 18
+    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 21
     Info (12023): Found entity 1: pipes File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 5
-Info (12128): Elaborating entity "pipes" for hierarchy "display_obstacle:inst8|pipes:pipes1" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 40
+Info (12128): Elaborating entity "pipes" for hierarchy "display_obstacle:inst16|pipes:pipes1" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 47
+Warning (10036): Verilog HDL or VHDL warning at pipes.vhd(43): object "top_pipe_end" assigned a value but never read File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 43
+Warning (10036): Verilog HDL or VHDL warning at pipes.vhd(44): object "bottom_pipe_start" assigned a value but never read File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 44
 Warning (12125): Using design file lfsr.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: lfsr-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 13
     Info (12023): Found entity 1: lfsr File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 5
-Info (12128): Elaborating entity "lfsr" for hierarchy "display_obstacle:inst8|pipes:pipes1|lfsr:random_number" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 43
+Info (12128): Elaborating entity "lfsr" for hierarchy "display_obstacle:inst16|pipes:pipes1|lfsr:random_number" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 51
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst2"
 Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 25
@@ -1253,6 +1248,10 @@ Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHARO
 Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 155
 Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 156
 Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 157
+Warning (12125): Using design file score.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: score-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 15
+    Info (12023): Found entity 1: score File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 5
+Info (12128): Elaborating entity "score" for hierarchy "score:inst9"
 Warning (12125): Using design file text.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info (12022): Found design unit 1: text-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 14
     Info (12023): Found entity 1: text File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 5
@@ -1306,7 +1305,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alt_
 Info (13000): Registers with preset signals will power-up high File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 146
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE0_CV_Default was ignored
@@ -1542,16 +1540,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning: RST port on the PLL is not properly connected on instance pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
-Info (21057): Implemented 791 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 853 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 8 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 735 logic cells
+    Info (21061): Implemented 797 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 259 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 262 warnings
     Info: Peak virtual memory: 4972 megabytes
-    Info: Processing ended: Tue May 21 16:28:08 2024
+    Info: Processing ended: Thu May 23 00:23:38 2024
     Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:13
 
