@@ -31,7 +31,7 @@ architecture Behavioral of pipes is
 
 
     constant pipe_width: integer := 60;
-    constant pipe_gap: integer := 80;
+    constant pipe_gap: integer := 140;
 
     signal pipe_x_position: std_logic_vector(9 downto 0);
     signal pipe_x_motion: std_logic_vector(9 downto 0);
@@ -94,20 +94,21 @@ begin
                     lfsr_clk <= '1';
                 end if;
     
-                -- Check for collision based on hardcoded ball x-position range (312 to 328)
+               -- check for x-coordinate collision
                 if (unsigned(pipe_x_position) - to_unsigned(pipe_width, 10) <= to_unsigned(328, 10) and
                 unsigned(pipe_x_position) >= to_unsigned(312, 10)) then
-                
-                    -- Check for y-coordinate collision
-                    if (unsigned(ball_y_pos) <= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) or
-                        unsigned(ball_y_pos) >= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
-                        collision_detected <= '0'; -- set to zero for debugging
+            
+
+                    -- check for y-coordinate collision
+                    if (unsigned(ball_y_pos) + to_unsigned(8, 10) >= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) and
+                        unsigned(ball_y_pos) - to_unsigned(8, 10) <= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
+                        collision_detected <= '0';  -- no collision when the bird is within the gap
                     else
-                        collision_detected <= '1';
+                        collision_detected <= '1';  -- collision if outside the gap
                     end if;
+
                 else
-                    collision_detected <= '0';
-                    
+                    collision_detected <= '0';  -- no collision if the pipe is outside the x range of the bird
                 end if;
             end if;
         end if;
