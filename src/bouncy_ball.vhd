@@ -6,9 +6,10 @@ USE  IEEE.STD_LOGIC_SIGNED.all;
 
 ENTITY bouncy_ball IS
 	PORT
-		( pb1, pb0, clk, vert_sync, left_click	: IN std_logic;
+		( pb1, clk, vert_sync, left_click	: IN std_logic;
           pixel_row, pixel_column				: IN std_logic_vector(9 DOWNTO 0);
 		  state									: IN std_logic_vector(1 DOWNTO 0);	
+		  reset									: IN std_logic;
 		  ball_rgb						        : OUT std_logic_vector(2 DOWNTO 0);	
 		  ball_on						        : OUT std_logic;
 		  start									: OUT std_logic;
@@ -37,15 +38,20 @@ ball_on_temp <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and (
 			'0';
 
 ball_rgb(2) <= pb1;
-ball_rgb(1) <= pb0;
+ball_rgb(1) <= '1';
 ball_rgb(0) <= '0';
 
 ball_on <= ball_on_temp;
 
-Move_Ball: process (vert_sync)  	
+Move_Ball: process (vert_sync, reset)  	
 begin
+	if reset = '1' then
+		ball_y_pos <= CONV_STD_LOGIC_VECTOR(240,10);
+		ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+		start_game <= '0';
+	
 	-- Move ball once every vertical sync
-	if (rising_edge(vert_sync)) then
+	elsif (rising_edge(vert_sync)) then
 
 		-- check if left click is pressed and left click was not pressed in the previous cycle (prevents holding down the button to move the ball continuously)
 		if left_click = '1' and left_click_prev = '0'then
@@ -80,9 +86,8 @@ begin
 		ball_y_pos <= ball_y_pos + ball_y_motion;
 		ball_y_pos_out <= ball_y_pos;
 
-		start <= start_game;
-
 	end if;
+	start <= start_game;
 end process Move_Ball;
 
 END behavior;

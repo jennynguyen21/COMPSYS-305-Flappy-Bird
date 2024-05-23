@@ -104,15 +104,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "pb0",
-					"strict" : false
-				},
-				{
 					"name" : "switches[1]",
 					"strict" : false
 				},
 				{
 					"name" : "switches[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pb0",
 					"strict" : false
 				},
 				{

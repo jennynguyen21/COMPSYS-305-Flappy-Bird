@@ -9,6 +9,7 @@ entity pipes is
         start_x_pos: in std_logic_vector(9 downto 0);
         lfsr_seed: in std_logic_vector(7 downto 0);
         start : in std_logic;
+        reset : in std_logic;
         ball_y_pos: in std_logic_vector(9 downto 0);
         state: in std_logic_vector(1 downto 0);
         pipes_rgb: OUT std_logic_vector(2 downto 0);
@@ -73,38 +74,40 @@ begin
     pipes_rgb <= "010" when pipe_on_temp = '1' else "000";
     pipe_on <= pipe_on_temp;
 
-    move_pipe: process(vert_sync)
+    move_pipe: process(vert_sync, reset)
     begin
-        if rising_edge(vert_sync) then
+        if reset = '1' then
+            pipe_x_position <= start_x_pos;
+            lfsr_clk <= '1';
+            collision_detected <= '0';
 
-            if start = '0' then
-                pipe_x_position <= start_x_pos;
-                --start <= '0';
-            else
-                if state /= "11" then 
-                        -- Check for collision based on hardcoded ball x-position range (312 to 328)
-                    if (unsigned(pipe_x_position) - to_unsigned(pipe_width, 10) <= to_unsigned(328, 10) and
-                    unsigned(pipe_x_position) >= to_unsigned(312, 10)) then
-                    
-                        -- Check for y-coordinate collision
-                        if (unsigned(ball_y_pos) <= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) or
-                            unsigned(ball_y_pos) >= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
-                            collision_detected <= '1';
-                        else
-                            collision_detected <= '0';
-                        end if;
+        elsif rising_edge(vert_sync) then
+
+            if start = '1' and state /= "11" and state /= "00" then
+
+                if to_integer(unsigned(pipe_x_position)) > 0 then
+                    pipe_x_motion <= std_logic_vector(to_unsigned(4, 10)); 
+                    pipe_x_position <= std_logic_vector(unsigned(pipe_x_position) - unsigned(pipe_x_motion));
+                    lfsr_clk <= '0';
+                else
+                    pipe_x_position <= std_logic_vector(to_unsigned(700, 10)); 
+                    lfsr_clk <= '1';
+                end if;
+    
+                -- Check for collision based on hardcoded ball x-position range (312 to 328)
+                if (unsigned(pipe_x_position) - to_unsigned(pipe_width, 10) <= to_unsigned(328, 10) and
+                unsigned(pipe_x_position) >= to_unsigned(312, 10)) then
+                
+                    -- Check for y-coordinate collision
+                    if (unsigned(ball_y_pos) <= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) or
+                        unsigned(ball_y_pos) >= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
+                        collision_detected <= '0'; -- set to zero for debugging
                     else
-                        collision_detected <= '0';
-                        
-                        if to_integer(unsigned(pipe_x_position)) > 0 then
-                            pipe_x_motion <= std_logic_vector(to_unsigned(4, 10)); 
-                            pipe_x_position <= std_logic_vector(unsigned(pipe_x_position) - unsigned(pipe_x_motion));
-                            lfsr_clk <= '0';
-                        else
-                            pipe_x_position <= std_logic_vector(to_unsigned(700, 10)); 
-                            lfsr_clk <= '1';
-                        end if;
+                        collision_detected <= '1';
                     end if;
+                else
+                    collision_detected <= '0';
+                    
                 end if;
             end if;
         end if;

@@ -61,16 +61,23 @@ refer to the applicable agreement for further details.
 	(port
 		(pt 0 112)
 		(input)
-		(text "ball_y_pos[9..0]" (rect 0 0 63 12)(font "Arial" ))
-		(text "ball_y_pos[9..0]" (rect 21 107 84 119)(font "Arial" ))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
+		(text "reset" (rect 0 0 20 12)(font "Arial" ))
+		(text "reset" (rect 21 107 41 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
 		(pt 0 128)
 		(input)
-		(text "state[1..0]" (rect 0 0 37 12)(font "Arial" ))
-		(text "state[1..0]" (rect 21 123 58 135)(font "Arial" ))
+		(text "ball_y_pos[9..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "ball_y_pos[9..0]" (rect 21 123 84 135)(font "Arial" ))
 		(line (pt 0 128)(pt 16 128)(line_width 3))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "state[1..0]" (rect 0 0 37 12)(font "Arial" ))
+		(text "state[1..0]" (rect 21 139 58 151)(font "Arial" ))
+		(line (pt 0 144)(pt 16 144)(line_width 3))
 	)
 	(port
 		(pt 232 32)

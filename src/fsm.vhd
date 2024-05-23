@@ -8,7 +8,8 @@ entity fsm is
         reset : in std_logic;
         pb2, pb3: in std_logic;
         collision : in std_logic;
-        state_out : out std_logic_vector(1 downto 0)
+        state_out : out std_logic_vector(1 downto 0);
+        reset_out : out std_logic
     );
 end entity fsm;
 
@@ -19,10 +20,12 @@ begin
     
     process(clk, reset)
     begin
-        if reset = '1' then
+        if reset = '0' then
             current_state <= start_game;  -- reset to initial state
+            reset_out <= '1';             
         elsif rising_edge(clk) then
             current_state <= next_state; -- transition to next state on clock edge
+            reset_out <= '0';             
         end if;
     end process;
 

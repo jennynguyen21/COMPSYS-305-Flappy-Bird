@@ -8,6 +8,7 @@ ENTITY display_obstacle is
         vert_sync : in std_logic;
         pixel_row, pixel_column: in std_logic_vector(9 downto 0);
         start : in std_logic;
+        reset : in std_logic;
         ball_y_pos: in std_logic_vector(9 downto 0);
         state: in std_logic_vector(1 downto 0);
         rgb_output : out std_logic_vector(2 downto 0);
@@ -26,6 +27,7 @@ architecture Behavioral of display_obstacle is
             start_x_pos: in std_logic_vector(9 downto 0);
             lfsr_seed: in std_logic_vector(7 downto 0);
             start : in std_logic;
+            reset : in std_logic;
             ball_y_pos: in std_logic_vector(9 downto 0);
             state: in std_logic_vector(1 downto 0);
             pipes_rgb: OUT std_logic_vector(2 downto 0);
@@ -52,6 +54,7 @@ architecture Behavioral of display_obstacle is
         start_x_pos => std_logic_vector(to_unsigned(700, 10)),
         lfsr_seed => "10101010",
         start => start,
+        reset => reset,
         ball_y_pos => ball_y_pos,
         state => state,
         pipes_rgb => pipe_1_rgb,
@@ -69,6 +72,7 @@ architecture Behavioral of display_obstacle is
         start_x_pos => std_logic_vector(to_unsigned(1020, 10)),
         lfsr_seed => "01010101",
         start => start,
+        reset => reset,
         ball_y_pos => ball_y_pos,
         state => state,
         pipes_rgb => pipe_2_rgb,
