@@ -9,13 +9,15 @@ entity fsm is
         pb2, pb3: in std_logic;
         collision : in std_logic;
         state_out : out std_logic_vector(1 downto 0);
-        reset_out : out std_logic
+        reset_out : out std_logic;
+        lives: out integer range 0 to 3
     );
 end entity fsm;
 
 architecture Behavioral of fsm is
     type state_type is (start_game, training_mode, normal_mode, game_over);
     signal current_state, next_state : state_type;
+    signal life: integer range 0 to 3;
 begin
     
     process(clk, reset)
@@ -36,17 +38,23 @@ begin
             when start_game =>
                 if pb2 = '0' then
                     next_state <= training_mode; -- Go to training mode if pb1 is pressed
-                
+                    life <= 3;
+                               
                 elsif pb3 = '0' then
                     next_state <= normal_mode;   -- Go to normal mode if pb2 is pressed
+                    life <= 0;
                     
                 else
                     next_state <= start_game;    -- Stay in start_game if no button is pressed
                 end if;
             
             when training_mode =>
-                if collision = '1' then
+                if (life > 1 and collision = '1') then
+                    life <= life - 1;
+                    next_state <= training_mode; -- stay in training mode
+                elsif (life <= 1 and collision = '1') then
                     next_state <= game_over;       -- Go to game over if collision is detected
+                    life <= 0;
                 else
                     next_state <= training_mode;  -- stay in training mode
                 end if;
@@ -63,8 +71,10 @@ begin
                 
             when others =>
                 next_state <= start_game;      -- default to start game 
+                life <= 3;
             
         end case;
+            lives <= life;
     end process;
 
     with current_state select
