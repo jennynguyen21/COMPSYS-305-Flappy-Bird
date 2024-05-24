@@ -34,10 +34,10 @@ begin
     begin
         case current_state is
             when start_game =>
-                if pb3 = '0' then
+                if pb2 = '0' then
                     next_state <= training_mode; -- Go to training mode if pb1 is pressed
-                               
-                elsif pb2 = '0' then
+                
+                elsif pb3 = '0' then
                     next_state <= normal_mode;   -- Go to normal mode if pb2 is pressed
                     
                 else

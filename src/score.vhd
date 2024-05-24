@@ -8,7 +8,8 @@ entity score is
         score_track: in std_logic;
         pixel_column, pixel_row: in unsigned (9 downto 0);
         text_enable: out std_logic;
-        vga_rgb: out std_logic_vector(2 downto 0)
+        vga_rgb: out std_logic_vector(2 downto 0);
+        score_out: out integer range 0 to 99
     );
 end entity score;
 
@@ -85,8 +86,11 @@ begin
                 else
                     text_enable_temp <= '0'; -- Disable text
                 end if;
+
+                score_out <= score;
             end if;
         end process;
+
 
     -- Output text RGB if enabled, otherwise keep VGA output unchanged
     vga_rgb <= text_rgb when text_enable_temp = '1' else (others => 'Z');
