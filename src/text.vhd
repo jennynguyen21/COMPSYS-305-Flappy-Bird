@@ -6,6 +6,7 @@ entity text is
     port (
         clock: in  std_logic;
         pixel_column, pixel_row: in unsigned (9 downto 0);
+        score: in integer range 0 to 99;
         text_enable: out std_logic;
         vga_rgb: out std_logic_vector(2 downto 0)
     );
@@ -41,85 +42,91 @@ begin
     get_characters : process (clock)
         begin
             if (rising_edge(clock)) then
-					-- Print out Level 1
+					-- Print out Level #
 					
-					-- L of Level 1
+					-- L of Level #
                 if ((pixel_column >= 0 and pixel_column < 16) and (pixel_row >= 464 and pixel_row < 480)) then 
                     char_address <= "001100"; --- L (Level)
                     font_col <= std_logic_vector(pixel_column - 0)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row - 464)(3 downto 1);
+                    font_row <= std_logic_vector(pixel_row - 464)(3 downto 1);
 						  
-					-- E of Level 1
-					 elsif ((pixel_column >= 16 and pixel_column < 32) and (pixel_row >= 464 and pixel_row < 480)) then 
+                    -- E of Level #
+                elsif ((pixel_column >= 16 and pixel_column < 32) and (pixel_row >= 464 and pixel_row < 480)) then 
                     char_address <= "000101"; --- E (Level)
                     font_col <= std_logic_vector(pixel_column - 16)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
-						  
-					-- V of Level 1
-					 elsif ((pixel_column >= 32 and pixel_column < 48) and (pixel_row >= 464 and pixel_row < 480)) then 
+                    font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
+                    
+                    -- V of Level #
+                elsif ((pixel_column >= 32 and pixel_column < 48) and (pixel_row >= 464 and pixel_row < 480)) then 
                     char_address <= "010110"; --- V (Level)
                     font_col <= std_logic_vector(pixel_column - 32)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
-						  
-					-- E of Level 1
-					 elsif ((pixel_column >= 48 and pixel_column < 64) and (pixel_row >= 464 and pixel_row < 480)) then 
+                    font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
+                    
+                    -- E of Level #
+                elsif ((pixel_column >= 48 and pixel_column < 64) and (pixel_row >= 464 and pixel_row < 480)) then 
                     char_address <= "000101"; --- E (Level)
                     font_col <= std_logic_vector(pixel_column - 48)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row - 464)(3 downto 1);
-						  
-					-- L of Level 1
+                    font_row <= std_logic_vector(pixel_row - 464)(3 downto 1);
+                    
+                    -- L of Level #
                 elsif ((pixel_column >= 64 and pixel_column < 80) and (pixel_row >= 464 and pixel_row < 480)) then 
                     char_address <= "001100"; --- L (Level)
                     font_col <= std_logic_vector(pixel_column - 64)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
-						  
-					-- Space of Level 1
+                    font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
+                        
+                    -- Space of Level #
                 elsif ((pixel_column >= 80 and pixel_column < 96) and (pixel_row >= 464 and pixel_row < 480)) then 
                     char_address <= "100000"; -- Space
                     font_col <= std_logic_vector(pixel_column - 80)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
-						  
-					-- 1 of Level 1
+                    font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
+                
+                    -- number of Level #
                 elsif ((pixel_column >= 96 and pixel_column < 112) and (pixel_row >= 464 and pixel_row < 480)) then 
-                    char_address <= "110001"; -- 1
+                    if (score <= 10) then 
+                        char_address <= "110001"; -- 1
+                    elsif (score > 10 and score <= 20) then 
+                        char_address <= "110010"; -- 2
+                    else
+                        char_address <= "110011"; -- 3
+                    end if;
+
                     font_col <= std_logic_vector(pixel_column - 96)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
-						
-						
-					 --Print out SCORE
-					 -- S of Score
-					 elsif ((pixel_column >= 0 and pixel_column < 32) and (pixel_row >= 12 and pixel_row < 44)) then 
+                    font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
+                    
+                    --Print out SCORE
+                    -- S of Score
+                elsif ((pixel_column >= 0 and pixel_column < 32) and (pixel_row >= 12 and pixel_row < 44)) then 
                     char_address <= "010011"; -- S (Score)
                     font_col <= std_logic_vector(pixel_column - 0)(4 downto 2);
-						  font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
-						  
-					-- C of Score
-					 elsif ((pixel_column >= 32 and pixel_column < 64) and (pixel_row >= 12 and pixel_row < 44)) then 
-                    char_address <= "000011"; -- C (Score)
-                    font_col <= std_logic_vector(pixel_column - 32)(4 downto 2);
-						  font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
-						  
-					-- O of Score
-					 elsif ((pixel_column >= 64 and pixel_column < 96) and (pixel_row >= 12 and pixel_row < 44)) then 
-                    char_address <= "001111"; -- O (Score)
-                    font_col <= std_logic_vector(pixel_column - 64)(4 downto 2);
-						  font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
-						  
-					-- R of Score
-					 elsif ((pixel_column >= 96 and pixel_column < 128) and (pixel_row >= 12 and pixel_row < 44)) then 
-                    char_address <= "010010"; -- R (Score)
-                    font_col <= std_logic_vector(pixel_column - 96)(4 downto 2);
-						  font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
-						  
-					-- E of Score
-					 elsif ((pixel_column >= 128 and pixel_column < 160) and (pixel_row >= 12 and pixel_row < 44)) then 
-                    char_address <= "000101"; -- E (Score)
-                    font_col <= std_logic_vector(pixel_column - 128)(4 downto 2);
-						  font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
+                    font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
+                    
+                    -- C of Score
+                elsif ((pixel_column >= 32 and pixel_column < 64) and (pixel_row >= 12 and pixel_row < 44)) then 
+                char_address <= "000011"; -- C (Score)
+                font_col <= std_logic_vector(pixel_column - 32)(4 downto 2);
+                font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
+                    
+                 -- O of Score
+                elsif ((pixel_column >= 64 and pixel_column < 96) and (pixel_row >= 12 and pixel_row < 44)) then 
+                char_address <= "001111"; -- O (Score)
+                font_col <= std_logic_vector(pixel_column - 64)(4 downto 2);
+                font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
+                    
+                    -- R of Score
+                elsif ((pixel_column >= 96 and pixel_column < 128) and (pixel_row >= 12 and pixel_row < 44)) then 
+                char_address <= "010010"; -- R (Score)
+                font_col <= std_logic_vector(pixel_column - 96)(4 downto 2);
+                font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
+                    
+                    -- E of Score
+                elsif ((pixel_column >= 128 and pixel_column < 160) and (pixel_row >= 12 and pixel_row < 44)) then 
+                char_address <= "000101"; -- E (Score)
+                font_col <= std_logic_vector(pixel_column - 128)(4 downto 2);
+                font_row <= std_logic_vector(pixel_row - 12)(4 downto 2); 
                 else
                     char_address <= "100000"; -- Space
                     font_col <= std_logic_vector(pixel_column)(3 downto 1);
-						  font_row <= std_logic_vector(pixel_row)(3 downto 1);
+                    font_row <= std_logic_vector(pixel_row)(3 downto 1);
                 end if;
 
                 -- Set text_rgb only when rom_output is '1'
