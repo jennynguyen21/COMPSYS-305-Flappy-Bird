@@ -18,13 +18,15 @@ architecture Behavioral of fsm is
     type state_type is (start_game, training_mode, normal_mode, game_over);
     signal current_state, next_state : state_type;
     signal life: integer range 0 to 3;
+    signal collision_buffer: std_logic := '0';
+    signal no_lives: std_logic := '0';
 begin
     
     process(clk, reset)
     begin
         if reset = '0' then
             current_state <= start_game;  -- reset to initial state
-            reset_out <= '1';             
+            reset_out <= '1';         
         elsif rising_edge(clk) then
             current_state <= next_state; -- transition to next state on clock edge
             reset_out <= '0';             
@@ -35,6 +37,7 @@ begin
     process(current_state, pb2, pb3, collision)
     begin
         case current_state is
+			--Start Game mode
             when start_game =>
                 if pb2 = '0' then
                     next_state <= training_mode; -- Go to training mode if pb1 is pressed
@@ -47,31 +50,45 @@ begin
                 else
                     next_state <= start_game;    -- Stay in start_game if no button is pressed
                 end if;
-            
-            when training_mode =>
-                if (life > 1 and collision = '1') then
-                    life <= life - 1;
-                    next_state <= training_mode; -- stay in training mode
-                elsif (life <= 1 and collision = '1') then
-                    next_state <= game_over;       -- Go to game over if collision is detected
-                    life <= 0;
-                else
-                    next_state <= training_mode;  -- stay in training mode
-                end if;
 
+			--Training Mode
+            when training_mode =>
+              if no_lives = '1' then --check first for the no_lives signal
+                next_state <= game_over; --immediately go to the game over state
+                no_lives <= '0';
+            end if;
+
+			--Determine number of hearts to display
+            if collision = '1' and collision_buffer = '0' then
+                if (life = 3) then
+                    life <= life - 1;
+                elsif (life = 2) then
+                    life <= life - 1;
+                elsif (life = 1) then
+                    life <= life - 1;
+                    lives <= 0;
+                    no_lives <= '1';
+                    --next_state <= game_over;
+                end if;
+            elsif collision = '0' then
+                next_state <= training_mode;
+            end if;
+            collision_buffer <= collision;
+            
+			--Normal Game Mode
             when normal_mode =>
                 if collision = '1' then
                     next_state <= game_over;       -- Go to game over if collision is detected
                 else
                     next_state <= normal_mode;     -- stay in normal mode
                 end if;
-        
+			
+			--Game over Mode
             when game_over =>
-                next_state <= game_over;       -- stay in game over
+                    next_state <= game_over;      -- stay in game over
                 
             when others =>
                 next_state <= start_game;      -- default to start game 
-                life <= 3;
             
         end case;
             lives <= life;
