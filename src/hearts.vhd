@@ -6,6 +6,7 @@ entity hearts is
     port (
         clock: in  std_logic;
         lives: in integer range 1 to 3;
+        state: in std_logic_vector(1 downto 0);
         pixel_column, pixel_row: in unsigned (9 downto 0);
         text_enable: out std_logic;
         vga_rgb: out std_logic_vector(2 downto 0)
@@ -102,7 +103,7 @@ begin
         end process;
 
     -- Output text RGB if enabled, otherwise keep VGA output unchanged
-    vga_rgb <= text_rgb when text_enable_temp = '1' else (others => 'Z');
-    text_enable <= text_enable_temp;
+    vga_rgb <= text_rgb when text_enable_temp = '1' and state = "01" else (others => 'Z');
+    text_enable <= text_enable_temp when state = "01" else '0';
 
 end architecture behavior;
