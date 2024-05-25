@@ -19,6 +19,7 @@ architecture Behavioral of fsm is
     signal current_state, next_state : state_type;
     signal life: integer range 0 to 3;
     signal collision_buffer: std_logic := '0';
+    signal no_lives: std_logic := '0';
 
 begin
     
@@ -42,6 +43,7 @@ begin
                 if pb2 = '0' then
                     next_state <= training_mode; -- Go to training mode if pb1 is pressed
                     life <= 3;
+                    no_lives <= '0';
                                
                 elsif pb3 = '0' then
                     next_state <= normal_mode;   -- Go to normal mode if pb2 is pressed
@@ -54,21 +56,22 @@ begin
 			--Training Mode
             when training_mode =>
 
-			--Determine number of hearts to display
-            if collision = '1' and collision_buffer = '0' then
-                if (life = 3) then
-                    life <= life - 1;
-                elsif (life = 2) then
-                    life <= life - 1;
-                elsif (life = 1) then
-                    life <= life - 1;
+             if collision = '1' and collision_buffer = '0' then
+                if life > 1 then
+                    life <= life - 1;  -- Decrement life if not already zero
+                else
                     lives <= 0;
-                    next_state <= game_over;
+                    no_lives <= '1';  -- Set the no_lives signal when lives are depleted
                 end if;
-            elsif collision = '0' then
+            end if;
+            collision_buffer <= collision; 
+
+            -- check for no lives to transition to game over
+            if no_lives = '1' then
+                next_state <= game_over;
+            else
                 next_state <= training_mode;
             end if;
-            collision_buffer <= collision;
 
 			--Normal Game Mode
             when normal_mode =>

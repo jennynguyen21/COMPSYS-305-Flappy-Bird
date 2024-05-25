@@ -7,6 +7,7 @@ entity text is
         clock: in  std_logic;
         pixel_column, pixel_row: in unsigned (9 downto 0);
         score: in integer range 0 to 99;
+        state: in std_logic_vector(1 downto 0);
         text_enable: out std_logic;
         vga_rgb: out std_logic_vector(2 downto 0)
     );
@@ -18,6 +19,12 @@ architecture behavior of text is
     signal rom_output : std_logic;
     signal text_rgb : std_logic_vector(2 downto 0);
     signal text_enable_temp : std_logic;
+	type array_type is array (0 to 2) of std_logic_vector (5 downto 0);
+    constant INIT_ARRAY : array_type := (
+        "110001", "110010", "110011"
+    );
+	signal level: integer range 0 to 3;
+    signal MY_ARRAY : array_type := INIT_ARRAY;
 
     -- Component declaration for char_rom
     component char_rom
@@ -43,7 +50,16 @@ begin
         begin
             if (rising_edge(clock)) then
 					-- Print out Level #
-					
+				 if state = "01" then 
+                    level <= 0;
+                 elsif (score <= 10) then 
+                    level <= 0;
+                elsif (score > 10 and score <= 20) then 
+                    level <= 1;
+                else
+                    level <= 2;
+                end if;
+				
 					-- L of Level #
                 if ((pixel_column >= 0 and pixel_column < 16) and (pixel_row >= 464 and pixel_row < 480)) then 
                     char_address <= "001100"; --- L (Level)
@@ -82,14 +98,7 @@ begin
                 
                     -- number of Level #
                 elsif ((pixel_column >= 96 and pixel_column < 112) and (pixel_row >= 464 and pixel_row < 480)) then 
-                    if (score <= 10) then 
-                        char_address <= "110001"; -- 1
-                    elsif (score > 10 and score <= 20) then 
-                        char_address <= "110010"; -- 2
-                    else
-                        char_address <= "110011"; -- 3
-                    end if;
-
+                    char_address <= MY_ARRAY(level);
                     font_col <= std_logic_vector(pixel_column - 96)(3 downto 1);
                     font_row <= std_logic_vector(pixel_row - 464)(3 downto 1); 
                     
@@ -136,10 +145,12 @@ begin
                 else
                     text_enable_temp <= '0'; -- Disable text
                 end if;
+
             end if;
-        end process;
+    end process; 
 
     -- Output text RGB if enabled, otherwise keep VGA output unchanged
-    vga_rgb <= text_rgb when text_enable_temp = '1' else (others => 'Z');
-    text_enable <= text_enable_temp;
-end architecture behavior;
+    vga_rgb <= text_rgb when text_enable_temp = '1' and state /= "00" else (others => 'Z');
+    text_enable <= text_enable_temp when state /= "00" else '0';
+
+end behavior;
