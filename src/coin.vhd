@@ -107,17 +107,15 @@ begin
 						end if;
                     else
                         collision_detected <= '0';  -- no collision
-						--coin_on_temp <= '1';
                     end if;
 
                 else
                     collision_detected <= '0';  -- no collision
-					--coin_on_temp <= '1';
                 end if;
             end if;
         end if;
     end process;
 
-    coin_collision <= collision_detected;
+    coin_collision <= collision_flag;
 
 end Behavioral;

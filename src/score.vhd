@@ -6,6 +6,7 @@ entity score is
     port (
         clock: in  std_logic;
         score_track: in std_logic;
+        coin_collision: in std_logic;
         state: in std_logic_vector(1 downto 0);
         reset: in std_logic;
         pixel_column, pixel_row: in unsigned (9 downto 0);
@@ -25,6 +26,7 @@ architecture behavior of score is
     signal tens: integer range 0 to 9;
     signal score: integer range 0 to 99;
     signal last_score_track : std_logic := '0';
+    signal last_coin_collision : std_logic := '0';
     
     type array_type is array (0 to 9) of std_logic_vector (5 downto 0);
     constant INIT_ARRAY : array_type := (
@@ -63,6 +65,13 @@ begin
 
             elsif rising_edge(clock) then 
 
+                -- incrementing the score through coin collision
+                if (coin_collision = '1' and last_coin_collision = '0') then
+                    score <= score + 2;
+                end if;
+                last_coin_collision <= coin_collision;  -- Update the last state
+
+                -- incrementing the score through passing the pipes
                 if (score_track = '1' and last_score_track = '0') then
                     score <= score + 1;
                 end if;
