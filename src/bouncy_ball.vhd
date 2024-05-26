@@ -13,7 +13,8 @@ ENTITY bouncy_ball IS
 		  ball_rgb						        : OUT std_logic_vector(2 DOWNTO 0);	
 		  ball_on						        : OUT std_logic;
 		  start									: OUT std_logic;
-		  ball_y_pos_out 						: OUT std_logic_vector(9 DOWNTO 0)
+		  ball_y_pos_out 						: OUT std_logic_vector(9 DOWNTO 0);
+		  ground_collision 						: OUT std_logic
 		  );
 END bouncy_ball;
 
@@ -49,12 +50,13 @@ begin
 		ball_y_pos <= CONV_STD_LOGIC_VECTOR(240,10);
 		ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 		start_game <= '0';
+		ground_collision <= '0';
 	
 	-- Move ball once every vertical sync
 	elsif (rising_edge(vert_sync)) then
 
 		-- check if left click is pressed and left click was not pressed in the previous cycle (prevents holding down the button to move the ball continuously)
-		if left_click = '1' and left_click_prev = '0'then
+		if left_click = '1' and left_click_prev = '0' then
 			start_game <= '1';
 
 			-- check if ball is not at the top of the screen
@@ -66,8 +68,9 @@ begin
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
 			end if;
 
-		else
-			if (start_game = '1') then
+		else -- if left click is not pressed
+			if (start_game = '1') then -- game must be started for the ball to fall
+			
 				-- check if ball is not at the bottom of the screen
 				if ( ball_y_pos <= CONV_STD_LOGIC_VECTOR(479,10) - size) then
 					-- move ball downwards (apply gravity)
@@ -75,6 +78,7 @@ begin
 				else 
 					-- don't move
 					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
+					ground_collision <= '1';
 				end if;
 			end if;
 		end if;	

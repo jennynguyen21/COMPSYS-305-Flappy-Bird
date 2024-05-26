@@ -8,6 +8,7 @@ entity fsm is
         reset : in std_logic;
         pb2, pb3: in std_logic;
         collision : in std_logic;
+        ground_collision : in std_logic;
         state_out : out std_logic_vector(1 downto 0);
         reset_out : out std_logic;
         lives: out integer range 0 to 3
@@ -51,7 +52,7 @@ begin
     end process calculate_lives;
 
     -- next_state_decode
-    process(current_state, pb2, pb3, collision)
+    process(current_state, pb2, pb3, collision, ground_collision)
     begin
         case current_state is
 			--Start Game mode
@@ -70,7 +71,7 @@ begin
             when training_mode =>
                     next_state <= training_mode;
 
-                    if life = 0 then
+                    if (life = 0 or ground_collision = '1') then
                         next_state <= game_over;
                     end if;
 
@@ -78,7 +79,7 @@ begin
             when normal_mode =>
                 next_state <= normal_mode;
 
-                if collision = '1' then
+                if (collision = '1' or ground_collision = '1')  then
                     next_state <= game_over;
                 end if;
 

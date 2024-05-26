@@ -107,6 +107,13 @@ refer to the applicable agreement for further details.
 		(text "ball_y_pos_out[9..0]" (rect 154 75 235 87)(font "Arial" ))
 		(line (pt 256 80)(pt 240 80)(line_width 3))
 	)
+	(port
+		(pt 256 96)
+		(output)
+		(text "ground_collision" (rect 0 0 61 12)(font "Arial" ))
+		(text "ground_collision" (rect 174 91 235 103)(font "Arial" ))
+		(line (pt 256 96)(pt 240 96)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 240 160)(line_width 1))
 	)

@@ -1,9 +1,9 @@
 |flappybird
 red_out <= VGA_SYNC:inst1.red_out
 clk => pll:inst3.refclk
-pb0 => fsm:inst8.reset
-pb2 => fsm:inst8.pb2
-pb3 => fsm:inst8.pb3
+pb0 => fsm:inst15.reset
+pb2 => fsm:inst15.pb2
+pb3 => fsm:inst15.pb3
 pb1 => bouncy_ball:inst.pb1
 PS2_DAT <> MOUSE:inst2.mouse_data
 PS2_CLK <> MOUSE:inst2.mouse_clk
@@ -1321,7 +1321,7 @@ q_a[6] <= ram_block1a6.PORTADATAOUT
 q_a[7] <= ram_block1a7.PORTADATAOUT
 
 
-|flappybird|fsm:inst8
+|flappybird|fsm:inst15
 clk => collision_buffer.CLK
 clk => life[0].CLK
 clk => life[1].CLK
@@ -1338,9 +1338,10 @@ pb2 => Selector0.IN1
 pb3 => next_state.DATAA
 pb3 => next_state.DATAA
 collision => calculate_lives.IN1
-collision => Selector2.IN3
+collision => process_2.IN0
 collision => collision_buffer.DATAIN
-collision => Selector1.IN2
+ground_collision => process_2.IN1
+ground_collision => process_2.IN1
 state_out[0] <= state_out.DB_MAX_OUTPUT_PORT_TYPE
 state_out[1] <= state_out.DB_MAX_OUTPUT_PORT_TYPE
 reset_out <= reset_out.DB_MAX_OUTPUT_PORT_TYPE
@@ -1811,6 +1812,7 @@ vert_sync => ball_y_pos_out[7]~reg0.CLK
 vert_sync => ball_y_pos_out[8]~reg0.CLK
 vert_sync => ball_y_pos_out[9]~reg0.CLK
 vert_sync => left_click_prev.CLK
+vert_sync => ground_collision~reg0.CLK
 vert_sync => start_game.CLK
 vert_sync => ball_y_motion[0].CLK
 vert_sync => ball_y_motion[1].CLK
@@ -1880,6 +1882,7 @@ state[0] => Equal2.IN3
 state[1] => Equal0.IN2
 state[1] => Equal1.IN2
 state[1] => Equal2.IN2
+reset => ground_collision~reg0.ACLR
 reset => start_game.ACLR
 reset => ball_y_motion[0].ACLR
 reset => ball_y_motion[1].ACLR
@@ -1927,6 +1930,7 @@ ball_y_pos_out[6] <= ball_y_pos_out[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ball_y_pos_out[7] <= ball_y_pos_out[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ball_y_pos_out[8] <= ball_y_pos_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ball_y_pos_out[9] <= ball_y_pos_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ground_collision <= ground_collision~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |flappybird|MOUSE:inst2
