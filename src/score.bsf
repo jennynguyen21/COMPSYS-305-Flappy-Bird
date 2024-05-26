@@ -93,6 +93,20 @@ refer to the applicable agreement for further details.
 		(text "score_out[6..0]" (rect 151 59 211 71)(font "Arial" ))
 		(line (pt 232 64)(pt 216 64)(line_width 3))
 	)
+	(port
+		(pt 232 80)
+		(output)
+		(text "ones_bcd[3..0]" (rect 0 0 59 12)(font "Arial" ))
+		(text "ones_bcd[3..0]" (rect 152 75 211 87)(font "Arial" ))
+		(line (pt 232 80)(pt 216 80)(line_width 3))
+	)
+	(port
+		(pt 232 96)
+		(output)
+		(text "tens_bcd[3..0]" (rect 0 0 56 12)(font "Arial" ))
+		(text "tens_bcd[3..0]" (rect 155 91 211 103)(font "Arial" ))
+		(line (pt 232 96)(pt 216 96)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 216 160)(line_width 1))
 	)
