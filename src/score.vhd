@@ -12,7 +12,9 @@ entity score is
         pixel_column, pixel_row: in unsigned (9 downto 0);
         text_enable: out std_logic;
         vga_rgb: out std_logic_vector(2 downto 0);
-        score_out: out integer range 0 to 99
+        score_out: out integer range 0 to 99;
+        ones_bcd: out std_logic_vector(3 downto 0);
+        tens_bcd: out std_logic_vector(3 downto 0)
     );
 end entity score;
 
@@ -62,6 +64,8 @@ begin
                 score <= 0;
                 ones <= 0;
                 tens <= 0;
+                ones_bcd <= "0000";
+                tens_bcd <= "0000";
 
             elsif rising_edge(clock) then 
 
@@ -80,6 +84,10 @@ begin
         
                 ones <= (score mod 10);
                 tens <= (score / 10);
+                
+                -- convert to bcd for seven segment display
+                ones_bcd <= std_logic_vector(to_unsigned(ones, 4));
+                tens_bcd <= std_logic_vector(to_unsigned(tens, 4));
         
                 if ((pixel_column >= 208 and pixel_column < 240) and (pixel_row >= 12 and pixel_row < 44)) then
                     char_address <= MY_ARRAY(ones);
