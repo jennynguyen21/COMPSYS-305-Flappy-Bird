@@ -15,7 +15,8 @@ ENTITY display_obstacle is
         rgb_output : out std_logic_vector(2 downto 0);
         pipe_on: out std_logic;
         score_track: out std_logic;
-        collision: out std_logic
+        collision: out std_logic;
+        coin_collision: OUT std_logic
     );
 END display_obstacle;
 
@@ -63,7 +64,7 @@ architecture Behavioral of display_obstacle is
     signal collision_1, collision_2: std_logic;
     signal coin_on: std_logic;
     signal coin_rgb: std_logic_vector(2 downto 0);
-    signal coin_collision: std_logic;
+    signal coin_hit: std_logic;
 
     begin
 
@@ -116,11 +117,12 @@ architecture Behavioral of display_obstacle is
         state => state,
         coin_rgb => coin_rgb,
         coin_on => coin_on,
-        coin_collision => coin_collision
+        coin_collision => coin_hit
     );
 
     pipes_detected <= pipe_on_1 or pipe_on_2;
     score_track <= score_track_1 or score_track_2;
+    coin_collision <= coin_hit;
     collision <= collision_1 or collision_2;
 
     process(clock)
