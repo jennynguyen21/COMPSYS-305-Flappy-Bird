@@ -6,8 +6,7 @@ entity score is
     port (
         clock: in  std_logic;
         score_track: in std_logic;
-        state: in std_logic_vector(1 downto 0);
-        reset: in std_logic;
+        state: in std_logic;
         pixel_column, pixel_row: in unsigned (9 downto 0);
         text_enable: out std_logic;
         vga_rgb: out std_logic_vector(2 downto 0);
@@ -54,14 +53,9 @@ begin
             rom_mux_output => rom_output
         );
 
-        get_characters : process (clock, reset)
+        get_characters : process (clock)
         begin
-            if reset = '1' then
-                score <= 0;
-                ones <= 0;
-                tens <= 0;
-
-            elsif rising_edge(clock) then 
+            if rising_edge(clock) then 
 
                 if (score_track = '1' and last_score_track = '0') then
                     score <= score + 1;
@@ -100,7 +94,7 @@ begin
 
 
     -- Output text RGB if enabled, otherwise keep VGA output unchanged
-    vga_rgb <= text_rgb when text_enable_temp = '1' and state /= "00" else (others => 'Z');
+    vga_rgb <= text_rgb when (text_enable_temp = '1' and state /= "00") else (others => 'Z');
     text_enable <= text_enable_temp when state /= "00" else '0';
 
 end architecture behavior;

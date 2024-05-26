@@ -8,7 +8,6 @@ entity pipes is
         pixel_row, pixel_column : in std_logic_vector(9 downto 0);
         start_x_pos: in std_logic_vector(9 downto 0);
         score: in integer range 0 to 99;
-        --x_speed: in std_logic_vector(9 downto 0);
         lfsr_seed: in std_logic_vector(7 downto 0);
         start : in std_logic;
         reset : in std_logic;
@@ -42,9 +41,6 @@ architecture Behavioral of pipes is
     signal lfsr_clk: std_logic;
     signal lfsr_out: std_logic_vector(7 downto 0);
 
-    signal top_pipe_end : std_logic_vector(9 downto 0);
-    signal bottom_pipe_start : std_logic_vector(9 downto 0);
-
     signal collision_detected : std_logic;
     signal collision_flag : std_logic := '0';
 
@@ -65,10 +61,6 @@ begin
         (unsigned(pixel_row) < unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) or
         unsigned(pixel_row) >  unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10))
     ) else '0';
-
-    -- Determine the top and bottom boundaries of the pipes
-    top_pipe_end <= std_logic_vector(unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10));
-    bottom_pipe_start <= std_logic_vector(unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10));
 
     score_track <= '1' when ((unsigned(pipe_x_position) <= 310) and (unsigned(pipe_x_position) >= 250)) else '0';
 
@@ -107,8 +99,8 @@ begin
                     unsigned(pipe_x_position) >= to_unsigned(312, 10)) then
 
                     -- Check for y-coordinate collision
-                    if (unsigned(ball_y_pos) + to_unsigned(8, 10) >= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) and
-                        unsigned(ball_y_pos) - to_unsigned(8, 10) <= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
+                    if (unsigned(ball_y_pos) - to_unsigned(8, 10) >= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) and
+                        unsigned(ball_y_pos) + to_unsigned(8, 10) <= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
                         collision_detected <= '0';  -- no collision when the bird is within the gap
                     else
                             collision_detected <= '1';  -- collision if outside the gap

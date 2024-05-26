@@ -8,7 +8,7 @@ mouse_state.WAIT_OUTPUT_READY 0 0 1 0 0 1
 mouse_state.WAIT_CMD_ACK 0 1 0 0 0 1 
 mouse_state.INPUT_PACKETS 1 0 0 0 0 1 
 
-State Machine - |flappybird|fsm:inst8|current_state
+State Machine - |flappybird|fsm:inst15|current_state
 Name current_state.game_over current_state.normal_mode current_state.training_mode current_state.start_game 
 current_state.start_game 0 0 0 0 
 current_state.training_mode 0 0 1 1 
