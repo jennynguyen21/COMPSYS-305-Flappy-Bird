@@ -17,86 +17,105 @@ end entity fsm;
 architecture Behavioral of fsm is
     type state_type is (start_game, training_mode, normal_mode, game_over);
     signal current_state, next_state : state_type;
-    signal life: integer range 0 to 3;
+    signal life: integer range 0 to 3 := 3;
     signal collision_buffer: std_logic := '0';
-    signal no_lives: std_logic := '0';
 
 begin
+
+    lives <= life;
     
-    process(clk, reset)
+    -- sync_proc
+    process(clk)
     begin
+      if rising_edge(clk) then
         if reset = '0' then
-            current_state <= start_game;  -- reset to initial state
-            reset_out <= '1';         
-        elsif rising_edge(clk) then
-            current_state <= next_state; -- transition to next state on clock edge
-            reset_out <= '0';             
+            current_state <= start_game;
+        else
+            current_state <= next_state;
         end if;
+      end if;
     end process;
 
-    -- next state logic process
+    calculate_lives: process(clk, collision)
+    begin
+        if rising_edge(clk) then
+            if reset = '0' then 
+                life <= 3;
+            elsif collision = '1' and collision_buffer = '0' then
+                if life >= 1 then
+                    life <= life - 1;
+                end if;
+            end if;
+            collision_buffer <= collision;
+        end if;
+    end process calculate_lives;
+
+    -- next_state_decode
     process(current_state, pb2, pb3, collision)
     begin
         case current_state is
 			--Start Game mode
             when start_game =>
+
+                next_state <= start_game;    -- Stay in start_game if no button is pressed
+
                 if pb2 = '0' then
                     next_state <= training_mode; -- Go to training mode if pb1 is pressed
-                    life <= 3;
-                    no_lives <= '0';
                                
                 elsif pb3 = '0' then
                     next_state <= normal_mode;   -- Go to normal mode if pb2 is pressed
-                    life <= 0;
-                    
-                else
-                    next_state <= start_game;    -- Stay in start_game if no button is pressed
                 end if;
 
 			--Training Mode
             when training_mode =>
+                    next_state <= training_mode;
 
-             if collision = '1' and collision_buffer = '0' then
-                if life > 1 then
-                    life <= life - 1;  -- Decrement life if not already zero
-                else
-                    lives <= 0;
-                    no_lives <= '1';  -- Set the no_lives signal when lives are depleted
-                end if;
-            end if;
-            collision_buffer <= collision; 
-
-            -- check for no lives to transition to game over
-            if no_lives = '1' then
-                next_state <= game_over;
-            else
-                next_state <= training_mode;
-            end if;
+                    if life = 0 then
+                        next_state <= game_over;
+                    end if;
 
 			--Normal Game Mode
             when normal_mode =>
+                next_state <= normal_mode;
+
                 if collision = '1' then
-                    next_state <= game_over;       -- Go to game over if collision is detected
-                else
-                    next_state <= normal_mode;     -- stay in normal mode
+                    next_state <= game_over;
                 end if;
-			
+
 			--Game over Mode
             when game_over =>
-                    next_state <= game_over;      -- stay in game over
+                next_state <= game_over;      -- stay in game over
                 
             when others =>
                 next_state <= start_game;      -- default to start game 
             
         end case;
-            lives <= life;
     end process;
 
-    with current_state select
-        state_out <= "00" when start_game,
-                     "01" when training_mode,
-                     "10" when normal_mode,
-                     "11" when game_over,
-                     "00" when others;
+    -- output_decode
+    process(current_state)
+    begin
+        case(current_state) is
+            when start_game =>
+                reset_out <= '1';
+                state_out <= "00";
+
+            when training_mode =>
+                reset_out <= '0';
+                state_out <= "01";
+
+            when normal_mode =>
+                reset_out <= '0';
+                state_out <= "10";
+
+            when game_over =>
+                state_out <= "11";
+                reset_out <= '0';
+
+            when others =>
+                state_out <= "00";
+                reset_out <= '1';
+        end case;
+    end process;
 
 end architecture Behavioral;
