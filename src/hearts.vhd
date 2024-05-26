@@ -46,17 +46,17 @@ begin
             if rising_edge(clock) then 
 
                 if (lives = 3) then
-					if ((pixel_column >= 558 and pixel_column < 590) and (pixel_row >= 12 and pixel_row < 44)) then
+					if ((pixel_column >= 560 and pixel_column < 592) and (pixel_row >= 12 and pixel_row < 44)) then
 						char_address <= "000000";
-						font_col <= std_logic_vector(pixel_column - 558)(4 downto 2);
+						font_col <= std_logic_vector(pixel_column - 560)(4 downto 2);
 						font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
-					elsif ((pixel_column >= 516 and pixel_column < 548) and (pixel_row >= 12 and pixel_row < 44)) then
+					elsif ((pixel_column >= 512 and pixel_column < 544) and (pixel_row >= 12 and pixel_row < 44)) then
 						char_address <= "000000";
-						font_col <= std_logic_vector(pixel_column - 516)(4 downto 2);
+						font_col <= std_logic_vector(pixel_column - 512)(4 downto 2);
 						font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
-					elsif ((pixel_column >= 474 and pixel_column < 506) and (pixel_row >= 12 and pixel_row < 44)) then
+					elsif ((pixel_column >= 464 and pixel_column < 496) and (pixel_row >= 12 and pixel_row < 44)) then
 						char_address <= "000000"; 
-						font_col <= std_logic_vector(pixel_column - 474)(4 downto 2);
+						font_col <= std_logic_vector(pixel_column - 464)(4 downto 2);
 						font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
 					else
 						char_address <= "100000"; -- Space
@@ -64,13 +64,13 @@ begin
 						font_row <= std_logic_vector(pixel_row)(3 downto 1);
 					end if;
 				elsif (lives = 2) then
-					if ((pixel_column >= 558 and pixel_column < 590) and (pixel_row >= 12 and pixel_row < 44)) then
+					if ((pixel_column >= 560 and pixel_column < 592) and (pixel_row >= 12 and pixel_row < 44)) then
 						char_address <= "000000";
-						font_col <= std_logic_vector(pixel_column - 558)(4 downto 2);
+						font_col <= std_logic_vector(pixel_column - 560)(4 downto 2);
 						font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
-					elsif ((pixel_column >= 516 and pixel_column < 548) and (pixel_row >= 12 and pixel_row < 44)) then
+					elsif ((pixel_column >= 512 and pixel_column < 544) and (pixel_row >= 12 and pixel_row < 44)) then
 						char_address <= "000000";
-						font_col <= std_logic_vector(pixel_column - 516)(4 downto 2);
+						font_col <= std_logic_vector(pixel_column - 512)(4 downto 2);
 						font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
 					else
 						char_address <= "100000"; -- Space
@@ -78,9 +78,9 @@ begin
 						font_row <= std_logic_vector(pixel_row)(3 downto 1);
 					end if;
 				elsif (lives = 1) then
-					if ((pixel_column >= 558 and pixel_column < 590) and (pixel_row >= 12 and pixel_row < 44)) then
+					if ((pixel_column >= 560 and pixel_column < 592) and (pixel_row >= 12 and pixel_row < 44)) then
 						char_address <= "000000";
-						font_col <= std_logic_vector(pixel_column - 558)(4 downto 2);
+						font_col <= std_logic_vector(pixel_column - 560)(4 downto 2);
 						font_row <= std_logic_vector(pixel_row - 12)(4 downto 2);
 					else
 						char_address <= "100000"; -- Space
