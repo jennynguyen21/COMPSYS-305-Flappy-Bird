@@ -86,7 +86,7 @@ begin
 
             if start = '1' and state /= "11" and state /= "00" then
 
-                if to_integer(unsigned(pipe_x_position)) - to_integer(unsigned(pipe_x_motion)) <= 0 then
+                if to_integer(unsigned(pipe_x_position)) - to_integer(to_unsigned(pipe_width,10)) <= 0 then
                     pipe_x_position <= std_logic_vector(to_unsigned(700, 10)); -- reset the pipe
                     lfsr_clk <= '1';
                 else

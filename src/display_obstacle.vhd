@@ -108,7 +108,7 @@ architecture Behavioral of display_obstacle is
         vert_sync => vert_sync,
         pixel_row => pixel_row,
         pixel_column => pixel_column,
-        start_x_pos => std_logic_vector(to_unsigned(910, 10)),
+        start_x_pos => std_logic_vector(to_unsigned(830, 10)),
         lfsr_seed => "11001100",
         start => start,
         reset => reset,
