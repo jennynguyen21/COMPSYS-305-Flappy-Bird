@@ -56,7 +56,7 @@ begin
 	elsif (rising_edge(vert_sync)) then
 
 		-- check if left click is pressed and left click was not pressed in the previous cycle (prevents holding down the button to move the ball continuously)
-		if left_click = '1' and left_click_prev = '0' then
+		if left_click = '1' and left_click_prev = '0' and state /= "11" then
 			start_game <= '1';
 
 			-- check if ball is not at the top of the screen
