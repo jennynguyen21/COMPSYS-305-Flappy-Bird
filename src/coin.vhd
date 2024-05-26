@@ -41,6 +41,23 @@ architecture Behavioral of coin is
     signal coin_x_motion: std_logic_vector(9 downto 0);
     signal collision_detected : std_logic;
 	signal collision_flag : std_logic := '0';
+	
+    -- Coin pattern as a 2D array of std_logic
+    TYPE coin_pattern_type IS ARRAY(0 TO 11) OF std_logic_vector(11 DOWNTO 0);
+    CONSTANT coin_pattern : coin_pattern_type := (
+        "000011110000",
+        "001111111100",
+        "011111111110",
+        "011111111110",
+        "111111111111",
+        "111111111111",
+        "111111111111",
+        "111111111111",
+        "011111111110",
+        "011111111110",
+        "001111111100",
+        "000011110000"
+    );
 begin
 
     random_number: lfsr 
@@ -55,13 +72,15 @@ begin
     coin_y_position <= std_logic_vector(to_unsigned(16, 10) + (unsigned(lfsr_out) mod to_unsigned(464 - coin_size, 10)));
 
     coin_on_temp <= '1' when (
-        unsigned(pixel_column) > unsigned(coin_x_position) - to_unsigned(coin_size, 10) and
+        unsigned(pixel_column) >= unsigned(coin_x_position) - to_unsigned(coin_size, 10) and
         unsigned(pixel_column) < unsigned(coin_x_position) and
         unsigned(pixel_row) >= unsigned(coin_y_position) and
-        unsigned(pixel_row) < unsigned(coin_y_position) + to_unsigned(coin_size, 10) and collision_flag = '0'
+        unsigned(pixel_row) < unsigned(coin_y_position) + to_unsigned(coin_size, 10) and
+        coin_pattern(to_integer(unsigned(pixel_row) - unsigned(coin_y_position)))(to_integer(unsigned(pixel_column) - (unsigned(coin_x_position) - to_unsigned(coin_size, 10)))) = '1' 
+        and collision_flag = '0'
     ) else '0';
 
-    coin_rgb <= "100" when coin_on_temp = '1' else "000";
+    coin_rgb <= "110" when coin_on_temp = '1' else "000";
     coin_on <= coin_on_temp;
 
     -- Determine the speed of the pipes based on the score
