@@ -90,7 +90,7 @@ begin
 			-- check if ball is not at the top of the screen
 			if (ball_y_pos >= size) then
 				-- move ball upwards
-				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(40,10);
+				ball_y_motion <= - CONV_STD_LOGIC_VECTOR(60,10);
 			else
 				-- don't move 
 				ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
@@ -102,7 +102,7 @@ begin
 				-- check if ball is not at the bottom of the screen
 				if ( ball_y_pos <= CONV_STD_LOGIC_VECTOR(479,10) - size) then
 					-- move ball downwards (apply gravity)
-					ball_y_motion <= CONV_STD_LOGIC_VECTOR(2,10);
+					ball_y_motion <= CONV_STD_LOGIC_VECTOR(4,10);
 				else 
 					-- don't move
 					ball_y_motion <= CONV_STD_LOGIC_VECTOR(0,10);
