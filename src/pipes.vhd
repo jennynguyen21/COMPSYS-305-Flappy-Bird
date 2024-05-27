@@ -95,12 +95,12 @@ begin
                 end if;
 
                 -- Check for x-coordinate collision
-                if (unsigned(pipe_x_position) - to_unsigned(pipe_width, 10) <= to_unsigned(328, 10) and
-                    unsigned(pipe_x_position) >= to_unsigned(312, 10)) then
+                if (unsigned(pipe_x_position) - to_unsigned(pipe_width, 10) <= to_unsigned(340, 10) and
+                    unsigned(pipe_x_position) >= to_unsigned(300, 10)) then
 
                     -- Check for y-coordinate collision
-                    if (unsigned(ball_y_pos) - to_unsigned(8, 10) >= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) and
-                        unsigned(ball_y_pos) + to_unsigned(8, 10) <= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
+                    if (unsigned(ball_y_pos) - to_unsigned(10, 10) >= unsigned(pipe_gap_center) - to_unsigned((pipe_gap / 2), 10) and
+                        unsigned(ball_y_pos) + to_unsigned(10, 10) <= unsigned(pipe_gap_center) + to_unsigned((pipe_gap / 2), 10)) then
                         collision_detected <= '0';  -- no collision when the bird is within the gap
                     else
                             collision_detected <= '1';  -- collision if outside the gap

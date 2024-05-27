@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun May 26 22:25:52 2024
+Analysis & Synthesis Status : Successful - Mon May 27 22:35:24 2024
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : flappybird
 Top-level Entity Name : flappybird
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 302
-Total pins : 31
+Total registers : 307
+Total pins : 32
 Total virtual pins : 0
-Total block memory bits : 20,480
+Total block memory bits : 21,504
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

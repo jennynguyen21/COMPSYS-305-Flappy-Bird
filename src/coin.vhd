@@ -113,11 +113,11 @@ begin
                 end if;
 
                 -- Check for collision with coin
-                if (unsigned(coin_x_position) <= to_unsigned(328, 10) and
-                    unsigned(coin_x_position) + to_unsigned(coin_size, 10) >= to_unsigned(312, 10)) then
+                if (unsigned(coin_x_position) <= to_unsigned(340, 10) and
+                    unsigned(coin_x_position) + to_unsigned(coin_size, 10) >= to_unsigned(300, 10)) then
                     -- Check for y-coordinate collision
-                    if (unsigned(ball_y_pos) + to_unsigned(8, 10) >= unsigned(coin_y_position) and
-                        unsigned(ball_y_pos) - to_unsigned(8, 10) <= unsigned(coin_y_position) + to_unsigned(coin_size, 10)) then
+                    if (unsigned(ball_y_pos) + to_unsigned(10, 10) >= unsigned(coin_y_position) and
+                        unsigned(ball_y_pos) - to_unsigned(10, 10) <= unsigned(coin_y_position) + to_unsigned(coin_size, 10)) then
 						if (collision_flag = '0') then
 							collision_detected <= '1';  -- collision with coin
 							collision_flag <= '1';
