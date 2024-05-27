@@ -1,5 +1,5 @@
 Analysis & Synthesis report for flappybird
-Mon May 27 19:00:38 2024
+Mon May 27 19:11:13 2024
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -70,14 +70,14 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 27 19:00:38 2024           ;
+; Analysis & Synthesis Status     ; Successful - Mon May 27 19:11:13 2024           ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                   ; flappybird                                      ;
 ; Top-level Entity Name           ; flappybird                                      ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
 ; Total registers                 ; 307                                             ;
-; Total pins                      ; 31                                              ;
+; Total pins                      ; 32                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 21,504                                          ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -196,7 +196,8 @@ refer to the applicable agreement for further details.
 ;     Processor 5            ;   0.0%      ;
 ;     Processor 6            ;   0.0%      ;
 ;     Processor 7            ;   0.0%      ;
-;     Processors 8-16        ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -259,18 +260,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                              ;
 +---------------------------------------------+--------------------------------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 595                                                                ;
+; Estimate of Logic utilization (ALMs needed) ; 594                                                                ;
 ;                                             ;                                                                    ;
-; Combinational ALUT usage for logic          ; 993                                                                ;
+; Combinational ALUT usage for logic          ; 995                                                                ;
 ;     -- 7 input functions                    ; 18                                                                 ;
-;     -- 6 input functions                    ; 169                                                                ;
-;     -- 5 input functions                    ; 165                                                                ;
-;     -- 4 input functions                    ; 133                                                                ;
-;     -- <=3 input functions                  ; 508                                                                ;
+;     -- 6 input functions                    ; 165                                                                ;
+;     -- 5 input functions                    ; 167                                                                ;
+;     -- 4 input functions                    ; 136                                                                ;
+;     -- <=3 input functions                  ; 509                                                                ;
 ;                                             ;                                                                    ;
 ; Dedicated logic registers                   ; 307                                                                ;
 ;                                             ;                                                                    ;
-; I/O pins                                    ; 31                                                                 ;
+; I/O pins                                    ; 32                                                                 ;
 ; Total MLAB memory bits                      ; 0                                                                  ;
 ; Total block memory bits                     ; 21504                                                              ;
 ;                                             ;                                                                    ;
@@ -281,8 +282,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                                    ;
 ; Maximum fan-out node                        ; pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
 ; Maximum fan-out                             ; 235                                                                ;
-; Total fan-out                               ; 5003                                                               ;
-; Average fan-out                             ; 3.54                                                               ;
+; Total fan-out                               ; 5006                                                               ;
+; Average fan-out                             ; 3.53                                                               ;
 +---------------------------------------------+--------------------------------------------------------------------+
 
 
@@ -291,12 +292,12 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |flappybird                                  ; 993 (1)             ; 307 (0)                   ; 21504             ; 0          ; 31   ; 0            ; |flappybird                                                                                                                                        ; flappybird          ; work         ;
+; |flappybird                                  ; 995 (1)             ; 307 (0)                   ; 21504             ; 0          ; 32   ; 0            ; |flappybird                                                                                                                                        ; flappybird          ; work         ;
 ;    |BCD_to_SevenSeg:inst6|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst6                                                                                                                  ; BCD_to_SevenSeg     ; work         ;
 ;    |BCD_to_SevenSeg:inst7|                   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|BCD_to_SevenSeg:inst7                                                                                                                  ; BCD_to_SevenSeg     ; work         ;
 ;    |MOUSE:inst2|                             ; 47 (47)             ; 65 (65)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|MOUSE:inst2                                                                                                                            ; MOUSE               ; work         ;
 ;    |VGA_SYNC:inst1|                          ; 46 (46)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|VGA_SYNC:inst1                                                                                                                         ; VGA_SYNC            ; work         ;
-;    |bouncy_ball:inst|                        ; 92 (92)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                                                       ; bouncy_ball         ; work         ;
+;    |bouncy_ball:inst|                        ; 95 (95)             ; 21 (21)                   ; 0                 ; 0          ; 0    ; 0            ; |flappybird|bouncy_ball:inst                                                                                                                       ; bouncy_ball         ; work         ;
 ;    |clouds:inst16|                           ; 53 (51)             ; 8 (8)                     ; 1024              ; 0          ; 0    ; 0            ; |flappybird|clouds:inst16                                                                                                                          ; clouds              ; work         ;
 ;       |char_rom:char_rom_inst|               ; 2 (2)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |flappybird|clouds:inst16|char_rom:char_rom_inst                                                                                                   ; char_rom            ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 1024              ; 0          ; 0    ; 0            ; |flappybird|clouds:inst16|char_rom:char_rom_inst|altsyncram:altsyncram_component                                                                   ; altsyncram          ; work         ;
@@ -328,8 +329,8 @@ refer to the applicable agreement for further details.
 ;    |pll:inst3|                               ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pll:inst3                                                                                                                              ; pll                 ; pll          ;
 ;       |pll_0002:pll_inst|                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pll:inst3|pll_0002:pll_inst                                                                                                            ; pll_0002            ; pll          ;
 ;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i                                                                                    ; altera_pll          ; work         ;
-;    |rgb_output:inst10|                       ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|rgb_output:inst10                                                                                                                      ; rgb_output          ; work         ;
-;       |rgb_multiplexer:inst6|                ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|rgb_output:inst10|rgb_multiplexer:inst6                                                                                                ; rgb_multiplexer     ; work         ;
+;    |rgb_output:inst10|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|rgb_output:inst10                                                                                                                      ; rgb_output          ; work         ;
+;       |rgb_multiplexer:inst6|                ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |flappybird|rgb_output:inst10|rgb_multiplexer:inst6                                                                                                ; rgb_multiplexer     ; work         ;
 ;    |score:inst14|                            ; 120 (32)            ; 45 (45)                   ; 4096              ; 0          ; 0    ; 0            ; |flappybird|score:inst14                                                                                                                           ; score               ; work         ;
 ;       |char_rom:char_rom_inst|               ; 2 (2)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|score:inst14|char_rom:char_rom_inst                                                                                                    ; char_rom            ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 4096              ; 0          ; 0    ; 0            ; |flappybird|score:inst14|char_rom:char_rom_inst|altsyncram:altsyncram_component                                                                    ; altsyncram          ; work         ;
@@ -495,8 +496,8 @@ Encoding Type:  One-Hot
 ; display_obstacle:inst8|pipes:pipes2|pipe_x_position[4]          ; 6       ;
 ; display_obstacle:inst8|pipes:pipes2|pipe_x_position[3]          ; 6       ;
 ; display_obstacle:inst8|pipes:pipes2|pipe_x_position[2]          ; 6       ;
-; fsm:inst15|life[1]                                              ; 7       ;
-; fsm:inst15|life[0]                                              ; 6       ;
+; fsm:inst15|life[1]                                              ; 8       ;
+; fsm:inst15|life[0]                                              ; 7       ;
 ; display_obstacle:inst8|coin:shiny_coin|lfsr:random_number|reset ; 8       ;
 ; display_obstacle:inst8|coin:shiny_coin|lfsr_clk                 ; 9       ;
 ; display_obstacle:inst8|pipes:pipes1|lfsr:random_number|reset    ; 8       ;
@@ -518,19 +519,19 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[3]                          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |flappybird|VGA_SYNC:inst1|v_count[2]                          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |flappybird|text:inst13|level[1]                               ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |flappybird|clouds:inst16|font_row[0]                          ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |flappybird|clouds:inst16|font_row[1]                          ;
 ; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; Yes        ; |flappybird|clouds:inst16|font_col[1]                          ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |flappybird|game_over:inst12|char_address[0]                   ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |flappybird|text:inst13|char_address[2]                        ;
 ; 38:1               ; 4 bits    ; 100 LEs       ; 100 LEs              ; 0 LEs                  ; Yes        ; |flappybird|menu:inst17|char_address[0]                        ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |flappybird|fsm:inst15|life[1]                                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |flappybird|fsm:inst15|life[0]                                 ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |flappybird|clouds:inst16|Add1                                 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |flappybird|clouds:inst16|Add1                                 ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst6|SevenSeg_out[2]              ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst6|SevenSeg_out[3]              ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|BCD_to_SevenSeg:inst7|SevenSeg_out[0]              ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|rgb_output:inst10|rgb_multiplexer:inst6|rgb_out[1] ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |flappybird|rgb_output:inst10|rgb_multiplexer:inst6|rgb_out[2] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 
 
@@ -1414,7 +1415,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 10                          ;
 ;     plain             ; 119                         ;
 ; arriav_io_obuf        ; 2                           ;
-; arriav_lcell_comb     ; 993                         ;
+; arriav_lcell_comb     ; 995                         ;
 ;     arith             ; 231                         ;
 ;         0 data inputs ; 19                          ;
 ;         1 data inputs ; 129                         ;
@@ -1424,25 +1425,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         5 data inputs ; 5                           ;
 ;     extend            ; 18                          ;
 ;         7 data inputs ; 18                          ;
-;     normal            ; 686                         ;
+;     normal            ; 688                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 17                          ;
-;         2 data inputs ; 118                         ;
-;         3 data inputs ; 106                         ;
-;         4 data inputs ; 115                         ;
-;         5 data inputs ; 160                         ;
-;         6 data inputs ; 169                         ;
+;         2 data inputs ; 117                         ;
+;         3 data inputs ; 108                         ;
+;         4 data inputs ; 118                         ;
+;         5 data inputs ; 162                         ;
+;         6 data inputs ; 165                         ;
 ;     shared            ; 58                          ;
 ;         0 data inputs ; 5                           ;
 ;         1 data inputs ; 39                          ;
 ;         2 data inputs ; 6                           ;
 ;         4 data inputs ; 8                           ;
-; boundary_port         ; 31                          ;
+; boundary_port         ; 32                          ;
 ; generic_pll           ; 1                           ;
 ; stratixv_ram_block    ; 48                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 12.20                       ;
-; Average LUT depth     ; 4.91                        ;
+; Average LUT depth     ; 4.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1451,7 +1452,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -1461,7 +1462,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon May 27 19:00:21 2024
+    Info: Processing started: Mon May 27 19:11:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappybird -c flappybird
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -1640,7 +1641,7 @@ Warning (12125): Using design file text.vhd, which is not specified as a design 
     Info (12023): Found entity 1: text File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 5
 Info (12128): Elaborating entity "text" for hierarchy "text:inst13"
 Warning (12125): Using design file clouds.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: clouds-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 14
+    Info (12022): Found design unit 1: clouds-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 15
     Info (12023): Found entity 1: clouds File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 5
 Info (12128): Elaborating entity "clouds" for hierarchy "clouds:inst16"
 Warning (12125): Using design file background.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
@@ -1656,9 +1657,9 @@ Warning (113028): 1 out of 4 addresses are uninitialized. The Quartus Prime soft
 Warning (113028): 6 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_score_75a97be.hdl.mif Line: 1
     Warning (113027): Addresses ranging from 10 to 15 are not initialized File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_score_75a97be.hdl.mif Line: 1
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 10
-    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 10
-    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 10
+    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
     Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
     Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
     Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
@@ -1956,17 +1957,17 @@ Warning: RST port on the PLL is not properly connected on instance pll:inst3|pll
     Info: Must be connected
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb1"
-Info (21057): Implemented 1151 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 8 input pins
+Info (21057): Implemented 1154 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 21 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1071 logic cells
+    Info (21061): Implemented 1073 logic cells
     Info (21064): Implemented 48 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 282 warnings
-    Info: Peak virtual memory: 4994 megabytes
-    Info: Processing ended: Mon May 27 19:00:38 2024
-    Info: Elapsed time: 00:00:17
+    Info: Peak virtual memory: 4953 megabytes
+    Info: Processing ended: Mon May 27 19:11:13 2024
+    Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:04
 
 

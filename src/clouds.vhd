@@ -6,6 +6,7 @@ entity clouds is
     port (
         clock: in  std_logic;
         pixel_column, pixel_row: in unsigned (9 downto 0);
+		  sw9: in std_logic;
         text_enable: out std_logic;
         vga_rgb: out std_logic_vector(2 downto 0)
     );
@@ -97,6 +98,6 @@ begin
 
     -- Output text RGB if enabled, otherwise keep VGA output unchanged
     vga_rgb <= text_rgb when text_enable_temp = '1' else (others => 'Z');
-    text_enable <= text_enable_temp;
+    text_enable <= text_enable_temp when sw9 = '1' else '0';
 
 end architecture behavior;

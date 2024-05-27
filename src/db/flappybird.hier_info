@@ -7,6 +7,7 @@ pb3 => fsm:inst15.pb3
 pb1 => bouncy_ball:inst.pb1
 PS2_DAT <> MOUSE:inst2.mouse_data
 PS2_CLK <> MOUSE:inst2.mouse_clk
+sw9 => clouds:inst16.sw9
 switches[0] => background:inst11.switches[0]
 switches[1] => background:inst11.switches[1]
 switches[2] => background:inst11.switches[2]
@@ -4429,7 +4430,8 @@ pixel_row[9] => LessThan23.IN11
 pixel_row[9] => Add7.IN9
 pixel_row[9] => LessThan26.IN11
 pixel_row[9] => LessThan27.IN11
-text_enable <= text_enable_temp.DB_MAX_OUTPUT_PORT_TYPE
+sw9 => text_enable.OUTPUTSELECT
+text_enable <= text_enable.DB_MAX_OUTPUT_PORT_TYPE
 vga_rgb[0] <= vga_rgb[0].DB_MAX_OUTPUT_PORT_TYPE
 vga_rgb[1] <= vga_rgb[1].DB_MAX_OUTPUT_PORT_TYPE
 vga_rgb[2] <= vga_rgb[2].DB_MAX_OUTPUT_PORT_TYPE

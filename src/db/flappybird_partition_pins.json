@@ -96,6 +96,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "sw9",
+					"strict" : false
+				},
+				{
 					"name" : "switches[2]",
 					"strict" : false
 				},

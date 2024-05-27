@@ -156,6 +156,22 @@ refer to the applicable agreement for further details.
 	(annotation_block (location)(rect 616 1032 672 1056))
 )
 (pin
+	(input)
+	(rect -8 1320 160 1336)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "sw9" (rect 5 0 24 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 488 448 664 464)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -1632,6 +1648,13 @@ refer to the applicable agreement for further details.
 		(text "pixel_row[9..0]" (rect 0 0 70 12)(font "Arial" ))
 		(text "pixel_row[9..0]" (rect 21 59 91 71)(font "Arial" ))
 		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "sw9" (rect 0 0 18 12)(font "Arial" ))
+		(text "sw9" (rect 21 75 39 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
 	)
 	(port
 		(pt 224 32)

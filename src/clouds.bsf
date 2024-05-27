@@ -45,6 +45,13 @@ refer to the applicable agreement for further details.
 		(line (pt 0 64)(pt 16 64)(line_width 3))
 	)
 	(port
+		(pt 0 80)
+		(input)
+		(text "sw9" (rect 0 0 15 12)(font "Arial" ))
+		(text "sw9" (rect 21 75 36 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 1))
+	)
+	(port
 		(pt 224 32)
 		(output)
 		(text "text_enable" (rect 0 0 44 12)(font "Arial" ))
