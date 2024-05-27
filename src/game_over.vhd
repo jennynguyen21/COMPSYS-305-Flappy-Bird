@@ -79,6 +79,14 @@ begin
 					char_address <= "010010"; -- R 
 					font_col <= std_logic_vector(pixel_column - 432)(4 downto 2);
 					font_row <= std_logic_vector(pixel_row - 120)(4 downto 2);
+				elsif ((pixel_column >= 288 and pixel_column < 320) and (pixel_row >= 168 and pixel_row < 200)) then 
+					char_address <= "111111"; -- :
+					font_col <= std_logic_vector(pixel_column - 288)(4 downto 2);
+					font_row <= std_logic_vector(pixel_row - 168)(4 downto 2);
+				elsif ((pixel_column >= 320 and pixel_column < 352) and (pixel_row >= 168 and pixel_row < 200)) then 
+					char_address <= "101000"; -- (
+					font_col <= std_logic_vector(pixel_column - 320)(4 downto 2);
+					font_row <= std_logic_vector(pixel_row - 168)(4 downto 2);
 				else
 					char_address <= "100000"; -- Space
                     font_col <= std_logic_vector(pixel_column)(3 downto 1);
