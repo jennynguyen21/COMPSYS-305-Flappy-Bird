@@ -1,6 +1,6 @@
 Analysis & Synthesis report for flappybird
-Mon May 27 19:11:13 2024
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Mon May 27 22:35:24 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -67,27 +67,27 @@ refer to the applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 27 19:11:13 2024           ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Revision Name                   ; flappybird                                      ;
-; Top-level Entity Name           ; flappybird                                      ;
-; Family                          ; Cyclone V                                       ;
-; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 307                                             ;
-; Total pins                      ; 32                                              ;
-; Total virtual pins              ; 0                                               ;
-; Total block memory bits         ; 21,504                                          ;
-; Total DSP Blocks                ; 0                                               ;
-; Total HSSI RX PCSs              ; 0                                               ;
-; Total HSSI PMA RX Deserializers ; 0                                               ;
-; Total HSSI TX PCSs              ; 0                                               ;
-; Total HSSI PMA TX Serializers   ; 0                                               ;
-; Total PLLs                      ; 1                                               ;
-; Total DLLs                      ; 0                                               ;
-+---------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon May 27 22:35:24 2024       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; flappybird                                  ;
+; Top-level Entity Name           ; flappybird                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 307                                         ;
+; Total pins                      ; 32                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 21,504                                      ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 1                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -201,58 +201,58 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                           ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                             ; Library ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
-; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/vga_sync.vhd                ;         ;
-; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd                   ;         ;
-; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/char_rom.vhd                ;         ;
-; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd             ;         ;
-; flappybird.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/flappybird.bdf              ;         ;
-; pll.vhd                          ; yes             ; User Wizard-Generated File             ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll.vhd                     ; pll     ;
-; pll/pll_0002.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v              ; pll     ;
-; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/BCD_to_7Seg.vhd             ;         ;
-; output_files/rgb_output.bdf      ; yes             ; User Block Diagram/Schematic File      ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/output_files/rgb_output.bdf ;         ;
-; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v                                                           ;         ;
-; rgb_multiplexer.vhd              ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/rgb_multiplexer.vhd         ;         ;
-; menu.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/menu.vhd                    ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                         ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                  ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                            ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                         ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                         ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                          ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altrom.inc                                                             ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altram.inc                                                             ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                                                           ;         ;
-; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf      ;         ;
-; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/tcgrom.mif                  ;         ;
-; fsm.vhd                          ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/fsm.vhd                     ;         ;
-; display_obstacle.vhd             ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd        ;         ;
-; pipes.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pipes.vhd                   ;         ;
-; lfsr.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/lfsr.vhd                    ;         ;
-; coin.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd                    ;         ;
-; score.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd                   ;         ;
-; game_over.vhd                    ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/game_over.vhd               ;         ;
-; hearts.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/hearts.vhd                  ;         ;
-; text.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd                    ;         ;
-; clouds.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd                  ;         ;
-; background.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/background.vhd              ;         ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                         ;         ;
-; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/abs_divider.inc                                                        ;         ;
-; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                    ;         ;
-; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_l3m.tdf       ;         ;
-; db/sign_div_unsign_1nh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_1nh.tdf  ;         ;
-; db/alt_u_div_82f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_82f.tdf        ;         ;
-; db/lpm_divide_a2m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_a2m.tdf       ;         ;
-; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_dkh.tdf  ;         ;
-; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_0te.tdf        ;         ;
-; db/lpm_divide_4am.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_4am.tdf       ;         ;
-; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_akh.tdf  ;         ;
-; db/alt_u_div_qse.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_qse.tdf        ;         ;
-+----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
+; vga_sync.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/vga_sync.vhd                ;         ;
+; mouse.vhd                        ; yes             ; User VHDL File                         ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd                   ;         ;
+; char_rom.vhd                     ; yes             ; User VHDL File                         ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd                ;         ;
+; bouncy_ball.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd             ;         ;
+; flappybird.bdf                   ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/flappybird.bdf              ;         ;
+; pll.vhd                          ; yes             ; User Wizard-Generated File             ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll.vhd                     ; pll     ;
+; pll/pll_0002.v                   ; yes             ; User Verilog HDL File                  ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v              ; pll     ;
+; BCD_to_7Seg.vhd                  ; yes             ; User VHDL File                         ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/BCD_to_7Seg.vhd             ;         ;
+; output_files/rgb_output.bdf      ; yes             ; User Block Diagram/Schematic File      ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/output_files/rgb_output.bdf ;         ;
+; altera_pll.v                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v                     ;         ;
+; rgb_multiplexer.vhd              ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/rgb_multiplexer.vhd         ;         ;
+; menu.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/menu.vhd                    ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                   ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc            ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                      ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                   ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                   ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                    ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                       ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                       ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                     ;         ;
+; db/altsyncram_d5g1.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf      ;         ;
+; tcgrom.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/tcgrom.mif                  ;         ;
+; fsm.vhd                          ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd                     ;         ;
+; display_obstacle.vhd             ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd        ;         ;
+; pipes.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd                   ;         ;
+; lfsr.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd                    ;         ;
+; coin.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd                    ;         ;
+; score.vhd                        ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd                   ;         ;
+; game_over.vhd                    ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/game_over.vhd               ;         ;
+; hearts.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/hearts.vhd                  ;         ;
+; text.vhd                         ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd                    ;         ;
+; clouds.vhd                       ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/clouds.vhd                  ;         ;
+; background.vhd                   ; yes             ; Auto-Found VHDL File                   ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/background.vhd              ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_divide.tdf                   ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/abs_divider.inc                  ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sign_div_unsign.inc              ;         ;
+; db/lpm_divide_l3m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_l3m.tdf       ;         ;
+; db/sign_div_unsign_1nh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_1nh.tdf  ;         ;
+; db/alt_u_div_82f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_82f.tdf        ;         ;
+; db/lpm_divide_a2m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_a2m.tdf       ;         ;
+; db/sign_div_unsign_dkh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_dkh.tdf  ;         ;
+; db/alt_u_div_0te.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_0te.tdf        ;         ;
+; db/lpm_divide_4am.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_4am.tdf       ;         ;
+; db/sign_div_unsign_akh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_akh.tdf  ;         ;
+; db/alt_u_div_qse.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_qse.tdf        ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------------------------------+
@@ -1461,46 +1461,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon May 27 19:11:05 2024
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon May 27 22:35:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off flappybird -c flappybird
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/vga_sync.vhd Line: 13
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/vga_sync.vhd Line: 7
+    Info (12022): Found design unit 1: VGA_SYNC-a File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/vga_sync.vhd Line: 13
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/vga_sync.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file mouse.vhd
-    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 18
-    Info (12023): Found entity 1: MOUSE File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 9
+    Info (12022): Found design unit 1: MOUSE-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 18
+    Info (12023): Found entity 1: MOUSE File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file char_rom.vhd
-    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 20
-    Info (12023): Found entity 1: char_rom File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 9
+    Info (12022): Found design unit 1: char_rom-SYN File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 20
+    Info (12023): Found entity 1: char_rom File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file bouncy_ball.vhd
-    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 21
-    Info (12023): Found entity 1: bouncy_ball File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 7
+    Info (12022): Found design unit 1: bouncy_ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 21
+    Info (12023): Found entity 1: bouncy_ball File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file ball.vhd
-    Info (12022): Found design unit 1: ball-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/ball.vhd Line: 14
-    Info (12023): Found entity 1: ball File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/ball.vhd Line: 7
+    Info (12022): Found design unit 1: ball-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/ball.vhd Line: 14
+    Info (12023): Found entity 1: ball File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/ball.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file flappybird.bdf
     Info (12023): Found entity 1: flappybird
 Info (12021): Found 2 design units, including 1 entities, in source file pll.vhd
-    Info (12022): Found design unit 1: pll-rtl File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll.vhd Line: 20
-    Info (12023): Found entity 1: pll File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll.vhd Line: 11
+    Info (12022): Found design unit 1: pll-rtl File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll.vhd Line: 20
+    Info (12023): Found entity 1: pll File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
-    Info (12023): Found entity 1: pll_0002 File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 2
+    Info (12023): Found entity 1: pll_0002 File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 2
 Info (12021): Found 2 design units, including 1 entities, in source file bcd_to_7seg.vhd
-    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/BCD_to_7Seg.vhd Line: 12
-    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/BCD_to_7Seg.vhd Line: 7
+    Info (12022): Found design unit 1: BCD_to_SevenSeg-arc1 File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/BCD_to_7Seg.vhd Line: 12
+    Info (12023): Found entity 1: BCD_to_SevenSeg File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/BCD_to_7Seg.vhd Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file output_files/rgb_output.bdf
     Info (12023): Found entity 1: rgb_output
 Info (12127): Elaborating entity "flappybird" for the top level hierarchy
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst1"
 Info (12128): Elaborating entity "pll" for hierarchy "pll:inst3"
-Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:inst3|pll_0002:pll_inst" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll.vhd Line: 32
-Info (12128): Elaborating entity "altera_pll" for hierarchy "pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 85
+Info (12128): Elaborating entity "pll_0002" for hierarchy "pll:inst3|pll_0002:pll_inst" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll.vhd Line: 32
+Info (12128): Elaborating entity "altera_pll" for hierarchy "pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 85
 Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
-Info (12130): Elaborated megafunction instantiation "pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 85
-Info (12133): Instantiated megafunction "pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 85
+Info (12130): Elaborated megafunction instantiation "pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 85
+Info (12133): Instantiated megafunction "pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pll/pll_0002.v Line: 85
     Info (12134): Parameter "fractional_vco_multiplier" = "false"
     Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
     Info (12134): Parameter "operation_mode" = "direct"
@@ -1563,17 +1563,17 @@ Info (12133): Instantiated megafunction "pll:inst3|pll_0002:pll_inst|altera_pll:
     Info (12134): Parameter "pll_subtype" = "General"
 Info (12128): Elaborating entity "rgb_output" for hierarchy "rgb_output:inst10"
 Warning (12125): Using design file rgb_multiplexer.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: rgb_multiplexer-behaviour File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/rgb_multiplexer.vhd Line: 14
-    Info (12023): Found entity 1: rgb_multiplexer File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/rgb_multiplexer.vhd Line: 6
+    Info (12022): Found design unit 1: rgb_multiplexer-behaviour File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/rgb_multiplexer.vhd Line: 14
+    Info (12023): Found entity 1: rgb_multiplexer File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/rgb_multiplexer.vhd Line: 6
 Info (12128): Elaborating entity "rgb_multiplexer" for hierarchy "rgb_output:inst10|rgb_multiplexer:inst6"
 Warning (12125): Using design file menu.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: menu-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 15
-    Info (12023): Found entity 1: menu File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 5
+    Info (12022): Found design unit 1: menu-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 15
+    Info (12023): Found entity 1: menu File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 5
 Info (12128): Elaborating entity "menu" for hierarchy "menu:inst17"
-Info (12128): Elaborating entity "char_rom" for hierarchy "menu:inst17|char_rom:char_rom_inst" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 34
-Info (12128): Elaborating entity "altsyncram" for hierarchy "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 51
-Info (12130): Elaborated megafunction instantiation "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 51
-Info (12133): Instantiated megafunction "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 51
+Info (12128): Elaborating entity "char_rom" for hierarchy "menu:inst17|char_rom:char_rom_inst" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 34
+Info (12128): Elaborating entity "altsyncram" for hierarchy "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 51
+Info (12130): Elaborated megafunction instantiation "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 51
+Info (12133): Instantiated megafunction "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/char_rom.vhd Line: 51
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
@@ -1589,137 +1589,137 @@ Info (12133): Instantiated megafunction "menu:inst17|char_rom:char_rom_inst|alts
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_d5g1.tdf
-    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf Line: 27
-Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+    Info (12023): Found entity 1: altsyncram_d5g1 File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_d5g1" for hierarchy "menu:inst17|char_rom:char_rom_inst|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (12125): Using design file fsm.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: fsm-Behavioral File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 18
-    Info (12023): Found entity 1: fsm File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 5
+    Info (12022): Found design unit 1: fsm-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 18
+    Info (12023): Found entity 1: fsm File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 5
 Info (12128): Elaborating entity "fsm" for hierarchy "fsm:inst15"
-Warning (10492): VHDL Process Statement warning at fsm.vhd(74): signal "life" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at fsm.vhd(74): signal "life" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/fsm.vhd Line: 74
 Warning (12125): Using design file display_obstacle.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: display_obstacle-Behavioral File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 23
-    Info (12023): Found entity 1: display_obstacle File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 5
+    Info (12022): Found design unit 1: display_obstacle-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 23
+    Info (12023): Found entity 1: display_obstacle File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 5
 Info (12128): Elaborating entity "display_obstacle" for hierarchy "display_obstacle:inst8"
 Warning (12125): Using design file pipes.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 23
-    Info (12023): Found entity 1: pipes File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 5
-Info (12128): Elaborating entity "pipes" for hierarchy "display_obstacle:inst8|pipes:pipes1" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 72
-Warning (10036): Verilog HDL or VHDL warning at pipes.vhd(45): object "collision_flag" assigned a value but never read File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 45
-Warning (10492): VHDL Process Statement warning at pipes.vhd(80): signal "start_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 80
+    Info (12022): Found design unit 1: pipes-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 23
+    Info (12023): Found entity 1: pipes File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 5
+Info (12128): Elaborating entity "pipes" for hierarchy "display_obstacle:inst8|pipes:pipes1" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 72
+Warning (10036): Verilog HDL or VHDL warning at pipes.vhd(45): object "collision_flag" assigned a value but never read File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at pipes.vhd(80): signal "start_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 80
 Warning (12125): Using design file lfsr.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lfsr-Behavioral File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 13
-    Info (12023): Found entity 1: lfsr File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 5
-Info (12128): Elaborating entity "lfsr" for hierarchy "display_obstacle:inst8|pipes:pipes1|lfsr:random_number" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 49
+    Info (12022): Found design unit 1: lfsr-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 13
+    Info (12023): Found entity 1: lfsr File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/lfsr.vhd Line: 5
+Info (12128): Elaborating entity "lfsr" for hierarchy "display_obstacle:inst8|pipes:pipes1|lfsr:random_number" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/pipes.vhd Line: 49
 Warning (12125): Using design file coin.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: coin-Behavioral File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 22
-    Info (12023): Found entity 1: coin File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 5
-Info (12128): Elaborating entity "coin" for hierarchy "display_obstacle:inst8|coin:shiny_coin" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 108
-Warning (10036): Verilog HDL or VHDL warning at coin.vhd(42): object "collision_detected" assigned a value but never read File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 42
-Warning (10492): VHDL Process Statement warning at coin.vhd(96): signal "start_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 96
+    Info (12022): Found design unit 1: coin-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 22
+    Info (12023): Found entity 1: coin File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 5
+Info (12128): Elaborating entity "coin" for hierarchy "display_obstacle:inst8|coin:shiny_coin" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/display_obstacle.vhd Line: 108
+Warning (10036): Verilog HDL or VHDL warning at coin.vhd(42): object "collision_detected" assigned a value but never read File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at coin.vhd(96): signal "start_x_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 96
 Info (12128): Elaborating entity "bouncy_ball" for hierarchy "bouncy_ball:inst"
-Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(122): signal "start_game" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 122
+Warning (10492): VHDL Process Statement warning at bouncy_ball.vhd(122): signal "start_game" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/bouncy_ball.vhd Line: 122
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst2"
-Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 25
-Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 151
-Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 155
-Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 156
-Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 157
+Warning (10036): Verilog HDL or VHDL warning at mouse.vhd(25): object "CHARIN" assigned a value but never read File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at mouse.vhd(151): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 151
+Warning (10492): VHDL Process Statement warning at mouse.vhd(155): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 155
+Warning (10492): VHDL Process Statement warning at mouse.vhd(156): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 156
+Warning (10492): VHDL Process Statement warning at mouse.vhd(157): signal "CHAROUT" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/mouse.vhd Line: 157
 Warning (12125): Using design file score.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: score-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 21
-    Info (12023): Found entity 1: score File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 5
+    Info (12022): Found design unit 1: score-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 21
+    Info (12023): Found entity 1: score File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 5
 Info (12128): Elaborating entity "score" for hierarchy "score:inst14"
 Warning (12125): Using design file game_over.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: game_over-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 15
-    Info (12023): Found entity 1: game_over File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 5
+    Info (12022): Found design unit 1: game_over-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 15
+    Info (12023): Found entity 1: game_over File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 5
 Info (12128): Elaborating entity "game_over" for hierarchy "game_over:inst12"
 Warning (12125): Using design file hearts.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: hearts-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 16
-    Info (12023): Found entity 1: hearts File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 5
+    Info (12022): Found design unit 1: hearts-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 16
+    Info (12023): Found entity 1: hearts File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 5
 Info (12128): Elaborating entity "hearts" for hierarchy "hearts:inst9"
 Warning (12125): Using design file text.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: text-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 16
-    Info (12023): Found entity 1: text File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 5
+    Info (12022): Found design unit 1: text-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 16
+    Info (12023): Found entity 1: text File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 5
 Info (12128): Elaborating entity "text" for hierarchy "text:inst13"
 Warning (12125): Using design file clouds.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: clouds-behavior File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 15
-    Info (12023): Found entity 1: clouds File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 5
+    Info (12022): Found design unit 1: clouds-behavior File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 15
+    Info (12023): Found entity 1: clouds File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 5
 Info (12128): Elaborating entity "clouds" for hierarchy "clouds:inst16"
 Warning (12125): Using design file background.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: background-Behavioral File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/background.vhd Line: 16
-    Info (12023): Found entity 1: background File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/background.vhd Line: 6
+    Info (12022): Found design unit 1: background-Behavioral File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/background.vhd Line: 16
+    Info (12023): Found entity 1: background File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/background.vhd Line: 6
 Info (12128): Elaborating entity "background" for hierarchy "background:inst11"
 Info (12128): Elaborating entity "BCD_to_SevenSeg" for hierarchy "BCD_to_SevenSeg:inst6"
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276004): RAM logic "text:inst13|MY_ARRAY" is uninferred due to inappropriate RAM size File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 27
-    Info (276004): RAM logic "score:inst14|MY_ARRAY" is uninferred due to inappropriate RAM size File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 39
-Warning (113028): 1 out of 4 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_text_41f78f.hdl.mif Line: 1
-    Warning (113026): Memory Initialization File Address 3 is not initialized File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_text_41f78f.hdl.mif Line: 1
-Warning (113028): 6 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_score_75a97be.hdl.mif Line: 1
-    Warning (113027): Addresses ranging from 10 to 15 are not initialized File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_score_75a97be.hdl.mif Line: 1
+    Info (276004): RAM logic "text:inst13|MY_ARRAY" is uninferred due to inappropriate RAM size File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 27
+    Info (276004): RAM logic "score:inst14|MY_ARRAY" is uninferred due to inappropriate RAM size File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 39
+Warning (113028): 1 out of 4 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_text_41f78f.hdl.mif Line: 1
+    Warning (113026): Memory Initialization File Address 3 is not initialized File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_text_41f78f.hdl.mif Line: 1
+Warning (113028): 6 out of 16 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_score_75a97be.hdl.mif Line: 1
+    Warning (113027): Addresses ranging from 10 to 15 are not initialized File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/flappybird.ram0_score_75a97be.hdl.mif Line: 1
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
-    Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
-    Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
-    Warning (13049): Converted tri-state buffer "hearts:inst9|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 12
-    Warning (13049): Converted tri-state buffer "hearts:inst9|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 12
-    Warning (13049): Converted tri-state buffer "hearts:inst9|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 12
-    Warning (13049): Converted tri-state buffer "game_over:inst12|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "game_over:inst12|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "game_over:inst12|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "score:inst14|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 14
-    Warning (13049): Converted tri-state buffer "score:inst14|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 14
-    Warning (13049): Converted tri-state buffer "score:inst14|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 14
-    Warning (13049): Converted tri-state buffer "menu:inst17|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "menu:inst17|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 11
-    Warning (13049): Converted tri-state buffer "menu:inst17|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "clouds:inst16|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/clouds.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
+    Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
+    Warning (13049): Converted tri-state buffer "text:inst13|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/text.vhd Line: 12
+    Warning (13049): Converted tri-state buffer "hearts:inst9|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 12
+    Warning (13049): Converted tri-state buffer "hearts:inst9|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 12
+    Warning (13049): Converted tri-state buffer "hearts:inst9|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/hearts.vhd Line: 12
+    Warning (13049): Converted tri-state buffer "game_over:inst12|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "game_over:inst12|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "game_over:inst12|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/game_over.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "score:inst14|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 14
+    Warning (13049): Converted tri-state buffer "score:inst14|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 14
+    Warning (13049): Converted tri-state buffer "score:inst14|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 14
+    Warning (13049): Converted tri-state buffer "menu:inst17|vga_rgb[2]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "menu:inst17|vga_rgb[1]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 11
+    Warning (13049): Converted tri-state buffer "menu:inst17|vga_rgb[0]" feeding internal logic into a wire File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/menu.vhd Line: 11
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_obstacle:inst8|coin:shiny_coin|Mod0" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 72
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score:inst14|Mod0" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 85
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score:inst14|Div0" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 86
-Info (12130): Elaborated megafunction instantiation "display_obstacle:inst8|coin:shiny_coin|lpm_divide:Mod0" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 72
-Info (12133): Instantiated megafunction "display_obstacle:inst8|coin:shiny_coin|lpm_divide:Mod0" with the following parameter: File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 72
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "display_obstacle:inst8|coin:shiny_coin|Mod0" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 72
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score:inst14|Mod0" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 85
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "score:inst14|Div0" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 86
+Info (12130): Elaborated megafunction instantiation "display_obstacle:inst8|coin:shiny_coin|lpm_divide:Mod0" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 72
+Info (12133): Instantiated megafunction "display_obstacle:inst8|coin:shiny_coin|lpm_divide:Mod0" with the following parameter: File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 72
     Info (12134): Parameter "LPM_WIDTHN" = "8"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_l3m.tdf
-    Info (12023): Found entity 1: lpm_divide_l3m File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_l3m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_l3m File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_l3m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_1nh File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_1nh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_1nh File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_1nh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_82f.tdf
-    Info (12023): Found entity 1: alt_u_div_82f File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_82f.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "score:inst14|lpm_divide:Mod0" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 85
-Info (12133): Instantiated megafunction "score:inst14|lpm_divide:Mod0" with the following parameter: File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 85
+    Info (12023): Found entity 1: alt_u_div_82f File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_82f.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "score:inst14|lpm_divide:Mod0" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 85
+Info (12133): Instantiated megafunction "score:inst14|lpm_divide:Mod0" with the following parameter: File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 85
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "7"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_a2m.tdf
-    Info (12023): Found entity 1: lpm_divide_a2m File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_a2m.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_a2m File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_a2m.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dkh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dkh File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_dkh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_dkh File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_dkh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_0te.tdf
-    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_0te.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "score:inst14|lpm_divide:Div0" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 86
-Info (12133): Instantiated megafunction "score:inst14|lpm_divide:Div0" with the following parameter: File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 86
+    Info (12023): Found entity 1: alt_u_div_0te File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_0te.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "score:inst14|lpm_divide:Div0" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 86
+Info (12133): Instantiated megafunction "score:inst14|lpm_divide:Div0" with the following parameter: File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/score.vhd Line: 86
     Info (12134): Parameter "LPM_WIDTHN" = "7"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_4am.tdf
-    Info (12023): Found entity 1: lpm_divide_4am File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_4am.tdf Line: 24
+    Info (12023): Found entity 1: lpm_divide_4am File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/lpm_divide_4am.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_akh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_akh.tdf Line: 24
+    Info (12023): Found entity 1: sign_div_unsign_akh File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/sign_div_unsign_akh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qse.tdf
-    Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_qse.tdf Line: 22
-Info (13000): Registers with preset signals will power-up high File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 95
+    Info (12023): Found entity 1: alt_u_div_qse File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/alt_u_div_qse.tdf Line: 22
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/coin.vhd Line: 95
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
-Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "clouds:inst16|char_rom:char_rom_inst|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/sisn751/OneDrive - The University of Auckland/Documents/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf Line: 31
+Info (17036): Removed 2 MSB VCC or GND address nodes from RAM block "clouds:inst16|char_rom:char_rom_inst|altsyncram:altsyncram_component|altsyncram_d5g1:auto_generated|ALTSYNCRAM" File: C:/Users/Jenny/Documents/GitHub/COMPSYS-305-Flappy-Bird/src/db/altsyncram_d5g1.tdf Line: 31
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK2_50 -entity DE0_CV_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CLOCK3_50 -entity DE0_CV_Default was ignored
@@ -1953,7 +1953,7 @@ Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity d
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE0_CV_Default -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 3 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning: RST port on the PLL is not properly connected on instance pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
+Warning: RST port on the PLL is not properly connected on instance pll:inst3|pll_0002:pll_inst|altera_pll:altera_pll_i|general[0].gpll. The reset port on the PLL should be connected. If the PLL loses lock for any reason, you might need to manually reset the PLL in order to re-establish lock to the reference clock. File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altera_pll.v Line: 748
     Info: Must be connected
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pb1"
@@ -1965,9 +1965,9 @@ Info (21057): Implemented 1154 device resources after synthesis - the final reso
     Info (21064): Implemented 48 RAM segments
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 282 warnings
-    Info: Peak virtual memory: 4953 megabytes
-    Info: Processing ended: Mon May 27 19:11:13 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Peak virtual memory: 4943 megabytes
+    Info: Processing ended: Mon May 27 22:35:24 2024
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:12
 
 

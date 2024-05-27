@@ -1,6 +1,6 @@
 Timing Analyzer report for flappybird
-Mon May 27 19:12:38 2024
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Mon May 27 22:36:40 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
 ---------------------
@@ -79,18 +79,18 @@ refer to the applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                         ;
-+-----------------------+---------------------------------------------------------+
-; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
-; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
-; Revision Name         ; flappybird                                              ;
-; Device Family         ; Cyclone V                                               ;
-; Device Name           ; 5CEBA4F23C7                                             ;
-; Timing Models         ; Final                                                   ;
-; Delay Model           ; Combined                                                ;
-; Rise/Fall Delays      ; Enabled                                                 ;
-+-----------------------+---------------------------------------------------------+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; flappybird                                          ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CEBA4F23C7                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
 
 
 +------------------------------------------+
@@ -101,26 +101,26 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 24          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.98        ;
+; Average used               ; 2.13        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   7.1%      ;
-;     Processor 3            ;   7.0%      ;
-;     Processor 4            ;   6.8%      ;
-;     Processor 5            ;   6.5%      ;
-;     Processor 6            ;   6.5%      ;
-;     Processor 7            ;   6.5%      ;
-;     Processor 8            ;   6.5%      ;
-;     Processor 9            ;   6.5%      ;
-;     Processor 10           ;   6.4%      ;
-;     Processor 11           ;   6.3%      ;
-;     Processor 12           ;   6.3%      ;
-;     Processor 13           ;   6.3%      ;
-;     Processor 14           ;   6.3%      ;
-;     Processor 15           ;   6.3%      ;
-;     Processor 16           ;   6.3%      ;
+;     Processor 2            ;   8.3%      ;
+;     Processor 3            ;   8.2%      ;
+;     Processor 4            ;   8.0%      ;
+;     Processor 5            ;   7.6%      ;
+;     Processor 6            ;   7.6%      ;
+;     Processor 7            ;   7.6%      ;
+;     Processor 8            ;   7.6%      ;
+;     Processor 9            ;   7.5%      ;
+;     Processor 10           ;   7.5%      ;
+;     Processor 11           ;   7.2%      ;
+;     Processor 12           ;   7.2%      ;
+;     Processor 13           ;   7.2%      ;
+;     Processor 14           ;   7.2%      ;
+;     Processor 15           ;   7.2%      ;
+;     Processor 16           ;   7.2%      ;
 +----------------------------+-------------+
 
 
@@ -883,8 +883,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
-    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon May 27 19:12:35 2024
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Mon May 27 22:36:37 2024
 Info: Command: quartus_sta flappybird -c flappybird
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 230 assignments for entity "DE0_CV_Default" -- entity does not exist in design
@@ -1340,9 +1340,9 @@ Info (332146): Worst-case minimum pulse width slack is -0.018
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 237 warnings
-    Info: Peak virtual memory: 5285 megabytes
-    Info: Processing ended: Mon May 27 19:12:38 2024
+    Info: Peak virtual memory: 5272 megabytes
+    Info: Processing ended: Mon May 27 22:36:40 2024
     Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:05
 
 
