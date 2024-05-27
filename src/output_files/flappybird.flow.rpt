@@ -1,6 +1,6 @@
 Flow report for flappybird
-Sun May 26 22:26:55 2024
-Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Mon May 27 17:58:44 2024
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
 ---------------------
@@ -37,29 +37,29 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sun May 26 22:26:51 2024       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; flappybird                                  ;
-; Top-level Entity Name           ; flappybird                                  ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CEBA4F23C7                                 ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 530 / 18,480 ( 3 % )                        ;
-; Total registers                 ; 342                                         ;
-; Total pins                      ; 31 / 224 ( 14 % )                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 20,480 / 3,153,920 ( < 1 % )                ;
-; Total DSP Blocks                ; 0 / 66 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 1 / 4 ( 25 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Mon May 27 17:58:38 2024           ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                   ; flappybird                                      ;
+; Top-level Entity Name           ; flappybird                                      ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CEBA4F23C7                                     ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 548 / 18,480 ( 3 % )                            ;
+; Total registers                 ; 337                                             ;
+; Total pins                      ; 31 / 224 ( 14 % )                               ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 20,480 / 3,153,920 ( < 1 % )                    ;
+; Total DSP Blocks                ; 0 / 66 ( 0 % )                                  ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 1 / 4 ( 25 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/26/2024 22:25:45 ;
+; Start date & time ; 05/27/2024 17:57:08 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; flappybird          ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 127913726162887.171671914405848        ; --            ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 224948462350776.171678942820004        ; --            ; --             ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --             ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --             ; --         ;
 ; MISC_FILE                           ; pll.cmp                                ; --            ; --             ; --         ;
@@ -100,11 +100,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:07     ; 1.0                     ; 4946 MB             ; 00:00:13                           ;
-; Fitter               ; 00:00:56     ; 1.1                     ; 7691 MB             ; 00:05:18                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4821 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 2.1                     ; 5274 MB             ; 00:00:06                           ;
-; Total                ; 00:01:08     ; --                      ; --                  ; 00:05:39                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4990 MB             ; 00:00:03                           ;
+; Fitter               ; 00:01:16     ; 1.1                     ; 7781 MB             ; 00:00:47                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4828 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.8                     ; 5286 MB             ; 00:00:03                           ;
+; Total                ; 00:01:32     ; --                      ; --                  ; 00:00:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -113,10 +113,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-9IINC57  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-9IINC57  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-9IINC57  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-9IINC57  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; EN453040         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; EN453040         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; EN453040         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; EN453040         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

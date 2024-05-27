@@ -28,18 +28,46 @@ SIGNAL ball_y_motion			: std_logic_vector(9 DOWNTO 0);
 SIGNAL left_click_prev 			: std_logic := '0';
 SIGNAL start_game 				: std_logic := '0';
 
+-- Coin pattern as a 2D array of std_logic
+TYPE bird_pattern_type IS ARRAY(0 TO 19) OF std_logic_vector(19 DOWNTO 0);
+CONSTANT bird_pattern : bird_pattern_type := (
+	"00000000001111110000", 
+	"00000000011111111000", 
+	"00000000110000000100", 
+	"11111100110001100100", 
+	"11111110110001100100", 
+	"01111111110000000111", 
+	"00111111110000000110", 
+	"00011111110000011000", 
+	"00011111111111110000", 
+	"00001111111111110000", 
+	"00000111111111110000", 
+	"00000011111111110000", 
+	"00000011111111110000", 
+	"00000011111111110000", 
+	"00000011111111110000", 
+	"00000011111111100000", 
+	"00001111111111100000", 
+	"00001111111111100000", 
+	"00001111000000000000", 
+	"00001111000000000000"
+
+);
+
 BEGIN           
 
-size <= CONV_STD_LOGIC_VECTOR(8,10);
+size <= CONV_STD_LOGIC_VECTOR(10,10);
 -- ball_x_pos and ball_y_pos show the (x,y) for the centre of ball
 ball_x_pos <= CONV_STD_LOGIC_VECTOR(320,11); -- 320 is the centre of the screen
 
-ball_on_temp <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size) 	-- x_pos - size <= pixel_column <= x_pos + size
-					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) and (state = "01" or state ="10" or state = "11" ))  else	-- y_pos - size <= pixel_row <= y_pos + size
-			'0';
+ball_on_temp <= '1' when ( ('0' & ball_x_pos <= '0' & pixel_column + size) and ('0' & pixel_column <= '0' & ball_x_pos + size - CONV_STD_LOGIC_VECTOR(1,10)) 	-- x_pos - size <= pixel_column <= x_pos + size
+					and ('0' & ball_y_pos <= pixel_row + size) and ('0' & pixel_row <= ball_y_pos + size) -- y_pos - size <= pixel_row <= y_pos + size
+					and (state = "01" or state ="10" or state = "11" ) and 
+					bird_pattern(CONV_INTEGER(pixel_row) - (CONV_INTEGER(ball_y_pos) - 10))((CONV_INTEGER(not pixel_column)) - (CONV_INTEGER(ball_x_pos) - 10)) = '1')
+					else '0';
 
-ball_rgb(2) <= pb1;
-ball_rgb(1) <= '1';
+ball_rgb(2) <= '0';
+ball_rgb(1) <= '0';
 ball_rgb(0) <= '0';
 
 ball_on <= ball_on_temp;
@@ -95,4 +123,3 @@ begin
 end process Move_Ball;
 
 END behavior;
-

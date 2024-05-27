@@ -96,10 +96,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "pb1",
-					"strict" : false
-				},
-				{
 					"name" : "switches[2]",
 					"strict" : false
 				},
