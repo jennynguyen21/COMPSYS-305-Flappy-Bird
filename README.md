@@ -4,7 +4,7 @@
 **Developed by [Jenny Nguyen](https://github.com/jennynguyen21) and [Shriya Singh](https://github.com/Shriya1412)**
 
 **Links**
-- [Interim Report](https://github.com/jennynguyen21/COMPSYS-305-Flappy-Bird/blob/main/src/Reports/Interim%20Report%20305.pdf)
+- [Interim Report](https://github.com/jennynguyen21/COMPSYS-305-Flappy-Bird/blob/main/Reports/Interim%20Report%20305.pdf)
 - [Final Report](https://github.com/jennynguyen21/COMPSYS-305-Flappy-Bird/blob/main/Reports/Final%20Report%20Group%2031.pdf)
 - [Demo Video (Training Mode)](https://drive.google.com/file/d/1jYVwMOJ9YdlFLSu5h5TBkCPDIYh8WJsR/view?usp=sharing)
 - [Demo Video (Normal Mode)](https://drive.google.com/file/d/1jfphk8Mr5JCZgXV5PIauMuIcFl37WOtk/view?usp=sharing)
